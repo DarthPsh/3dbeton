@@ -1,0 +1,152 @@
+@mixin box($width,$height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin gradient-text {
+  -webkit-background-clip: text; /* Обрезаем фон по тексту */
+  -webkit-text-fill-color: transparent; /* Прозрачный текст */
+}
+
+// ↓↓↓ миксины с текстом ↓↓↓
+@mixin Body {
+  font-family: 'Proxima Nova', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 150%;
+  // letter-spacing: 0.01em;
+  color: #000000;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+@mixin H2 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 80px;
+  line-height: 100%;
+  @media (max-width: 1600px) {
+    font-size: 64px;
+    line-height: 100%;
+  }
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 100%;
+  }
+}
+
+@mixin H3 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 120%;
+  @media (max-width: 1600px) {
+    font-size: 30px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 120%;
+  }
+}
+
+@mixin H3-dim {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  @media (max-width: 1600px) {
+    font-size: 24px;
+    line-height: 120%;
+  }
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 124%;
+  }
+}
+
+@mixin H4 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px; 
+  line-height: 120%;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    line-height: 124%;
+  }
+}
+
+@mixin Small-16 {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+@mixin Tiny {
+  font-family: 'Proxima Nova';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+}
+
+@mixin COND20 {
+  font-family: Proxima Nova Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+@mixin COND16 {
+  font-family: Proxima Nova Condensed;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+// ↑↑↑ миксины с текстом ↑↑↑
+
+$units: 1px !default;
+@mixin screen($res-first, $res-last: $res-first) {
+  @if $res-first == $res-last {
+    @media screen and (max-width: if(unitless($res-first), ($res-first - 1) *$units, $res-first)) {
+      @content;
+    }
+  }
+  @else if $res-first < $res-last {
+    @media screen and (min-width: if(unitless($res-first), $res-first*$units, $res-first)) and (max-width: if(unitless($res-last), $res-last*$units, $res-last)) {
+      @content;
+    }
+  }
+}
+@mixin min-screen($res) {
+  @media screen and (min-width: if(unitless($res), $res*$units, $res)) {
+    @content;
+  }
+}

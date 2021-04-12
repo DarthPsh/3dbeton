@@ -1,0 +1,77 @@
+.production {
+    &-section {
+        @media (max-width: 1600px) {
+            padding-right: 130px;
+        }
+    }
+    &-content {
+        padding: 93px 0 136px 0;
+        @media (max-width: 1600px) {
+            padding: 68px 0 115px 0; 
+        }
+    }
+    &-list {
+        display: grid;
+        // grid-template-columns: repeat(auto-fit,minmax(358px,1fr));
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        max-width: 1624px;
+        row-gap: 22px;
+        column-gap: 64px;
+        justify-items: start;
+        @media (max-width: 1600px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__item {
+            position: relative;
+            &-link {
+                @include COND20;
+                text-transform: uppercase;
+                color: var(--Black);
+                transition: .2s;
+                z-index: 1;
+                position: relative;
+                display: block;
+                &::after {
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: var(--Grad3);
+                    z-index: -1;
+                    transition: .2s;
+                    opacity: 0;
+                }
+                &:hover {
+                    color: var(--White);
+                    z-index: 100;
+                    &::after {
+                        opacity: 1;
+                    }
+                    + .production-list__item-img {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+            &-img {
+                height: 180px;
+                width: 240px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translateY(-50%);
+                opacity: 0;
+                visibility: hidden;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transform-style: preserv-3d;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.pageslider {
+    overflow: visible;
+    .swiper-slide-prev,
+    .swiper-slide-next {
+        .pageslider-item__img {
+            opacity: 0.5;
+        }
+        .pageslider-item__content {
+            opacity: 0;
+        }
+    }
+    &-section {
+        overflow: hidden;
+    }
+    &-content {
+        padding-top: 62px;
+        padding-bottom: 146px;
+        position: relative;
+    }
+    &-item {
+        display: flex;
+        max-width: 1620px;
+        @media (max-width: 1600px) {
+            max-width: 1154px;
+        }
+        &__side {
+            max-width: 780px;
+            width: 100%;
+            @media (max-width: 1600px) {
+                max-width: 557px
+            }
+        }
+        &__img {
+            height: 460px;
+            margin-bottom: 40px;
+            transition: .3s;
+            @media (max-width: 1600px) {
+                height: 340px;
+            }
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover
+            };
+        }
+        &__content {
+            max-width: 687px;
+            transition: .3s;
+        }
+        &__title {
+            @include H3;
+            margin-bottom: 23px;
+        }
+        &__geo {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            order: 1;
+            align-items: baseline;
+            &:after {
+                content: '';
+                border-bottom: 1px solid var(--Black);
+                flex-grow: 1;
+                margin: 0 8px;
+                order: 2;
+            }
+        }
+        &__tag {
+            &s {
+                @include COND16;
+                color: var(--Gray);
+            }
+            padding: 10px 21px 7px 21px;
+            border: 1px solid var(--Gray);
+            border-radius: 40px;
+            margin-right: 12px;
+            margin-top: 11px;
+            display: inline-block;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &__main {
+            margin-right: 55px;
+        }
+    }
+    &-controls {
+        position: absolute;
+        right: 0;
+        top: 574px;
+        @media (max-width: 1600px) {
+            top: 435px;
+        }
+    }
+}

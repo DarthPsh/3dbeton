@@ -1,0 +1,58 @@
+footer.footer 
+    .container
+        .footer-wrap
+            h2.footer-title Свяжитесь с нами
+        .footer-content 
+            aside.footer-aside 
+                .footer-block
+                    h3.footer-block__title Главный офис в Москве
+                    ul
+                        li 
+                            a(href="tel:+7 (499) 391-03-55") +7 (499) 391-03-55
+                        li ул. Гиляровского, д. 53, офис 3
+                        li пн-пт: 09:00–20:00 
+                        li сб-вс: 09:00–19:00
+                .footer-block
+                    h3.footer-block__title Офис в Пензе
+                    ul
+                        li 
+                            a(href="tel:+7 (499) 391-03-55") +7 (499) 391-03-55
+                        li ул. Володарского, 20, офис 5
+                        li пн-пт: 09:00–20:00 
+                        li сб-вс: 09:00–19:00
+            article.footer-article
+                .footer-article__info 
+                    h3.footer-article__title Расскажите 
+                        br
+                        | о своем проекте 
+                    p Заполните форму или отправьте заявку на 
+                        a(href="mailto:info@3dbeton.ru") info@3dbeton.ru
+                    p Мы свяжемся с вами и ответим на все вопросы
+                .footer-article__form
+                    form#footer-form
+                        input(type="text" placeholder="Имя")
+                        input(type="tel" placeholder="Телефон")
+                        input(type="email" placeholder="Почта")
+                        textarea(placeholder="Задача проекта")
+                        label.download-file
+                            span ПРИКРЕПИТЬ ФАЙЛ
+                            +icon('circle-plus')
+                            input(type="file")
+                        .footer-article__form-bot 
+                            .footer-policy Нажимая на кнопку «Отправить», я соглашаюсь с 
+                                a(href="#") Политикой конфиденциальности
+                            button#footer-send(type="submit") ОТПРАВИТЬ
+        .footer-bot
+            .footer-bot__item.footer-bot__copy (с) ООО “3D-бетон”, 2021 Все права защищены 
+            .footer-bot__item.footer-bot__social
+                ul 
+                    li
+                        a(href="#") ВК
+                    li
+                        a(href="#") ФБ
+                    li
+                        a(href="#") ИНСТ
+                    li
+                        a(href="#") ТЕЛЕГРАМ
+            .footer-bot__item.footer-bot__dev Сайт сделан в 
+                a(href="https://7pap.ru/") СЕМЬ ПАП: 

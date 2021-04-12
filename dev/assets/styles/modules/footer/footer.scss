@@ -1,0 +1,188 @@
+footer { flex: 0 0 auto; }
+
+.footer {
+    color: var(--White);
+    background: var(--Gradient1);
+    a {
+        color: var(--White);
+    }
+    p {
+        margin-bottom: 24px;
+        @media (max-width: 1600px) {
+            margin-bottom: 0;
+        }
+    }
+    &-wrap {}
+    &-title {
+        padding: 28px 0;
+    }
+    &-content {
+        border-top: 1px solid var(--White);
+        border-bottom: 1px solid var(--White);
+        display: flex;
+    }
+    &-aside {
+        border-right: 1px solid var(--White);
+        padding-top: 85px;
+        padding-right: 66px;
+        
+    }
+    &-article {
+        width: 100%;
+        padding-top: 85px;
+        padding-bottom: 134px;
+        padding-left: 66px;
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1600px) {
+            flex-direction: column;
+        }
+        &__info {
+            width: 289px;
+            @media (max-width: 1600px) {
+                width: auto;
+            }
+        }
+        &__title {
+            margin-bottom: 32px;
+            @include H3;
+            @media (max-width: 1600px) {
+                margin-bottom: 23px;
+                br {
+                    display: none;
+                }
+            }
+        }
+        &__form {
+            max-width: 782px;
+            @media (max-width: 1600px) {
+                padding-top: 34px;
+                max-width: 756px;
+            }
+            input {
+                width: 100%;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid var(--White);
+                border-radius: 0;
+                padding-bottom: 10px;
+                color: var(--White);
+                margin-bottom: 49px;
+            }
+            textarea {
+                margin-top: 10px;
+                margin-bottom: 26px;
+                width: 100%;
+                height: 238px;
+                background: transparent;
+                border-color: var(--White);
+                border-radius: 0;
+                padding: 23px;
+                color: var(--White);
+            }
+            ::placeholder {
+                color: var(--White);
+            }
+            &-bot {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            button[type="submit"] {
+                @include COND20;
+                width: auto;
+                padding: 20px 95px;
+                background: rgba(255, 255, 255, 0.24);
+                border: none;
+                margin: 0;
+                cursor: pointer;
+                position: relative;
+                color: var(--White);
+                z-index: 1;
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: var(--BtnRect);
+                    z-index: -1;
+                    opacity: 0;
+                    transition: .2s;
+                }
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+                
+            }
+        }
+    }
+    &-block {
+        padding-bottom: 64px;
+        max-width: 307px;
+        &__title {
+            margin-bottom: 32px;
+            @include H3;
+        }
+    }
+    &-policy {
+        @include Small-16;
+        opacity: 0.75;
+        max-width: 368px;
+        a {
+            position: relative;
+            &:after {
+                content: "";
+                height: 1px;
+                width: 100%;
+                background: rgba(#ffffff, .24);
+                display: block;
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+            }
+            &:hover {
+                background: var(--Grad3);
+                @include gradient-text;
+            }
+        }
+    }
+    &-bot {
+        display: flex;
+        padding: 20px 0 28px 0;
+        &__item {
+            flex-basis: calc(100% / 3);
+        }
+        &__copy {
+            color: rgba(255, 255, 255, 0.62);
+        }
+        &__social {
+            ul {
+                display: flex;
+                justify-content: center;
+                li {
+                    a {
+                        @include COND20;
+                        margin-right: 40px;  
+                    }
+                    &:last-child {
+                        a {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__dev {
+            text-align: right;
+            color: rgba(255, 255, 255, 0.62);
+            a {
+                @include COND20;
+            }
+        }
+    }
+}

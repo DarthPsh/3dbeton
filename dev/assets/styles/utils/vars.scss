@@ -1,0 +1,32 @@
+// Colors
+$white: #fff;
+$black: #000;
+
+:root {
+    --BrandRed: #F33C3C;
+    --Gradient1: linear-gradient(180deg, #E96F6F 0%, #5C0963 100%);
+    --Grad2: linear-gradient(180deg, #E96F6F 0%, #D25CDC 100%);
+    --Grad3: linear-gradient(90.32deg, #F44949 4.29%, #D25CDC 99.88%);
+    --CircleButton: linear-gradient(154.5deg, #E96F6F 42.73%, #D25CDC 113.65%);
+    --BtnRect: linear-gradient(139.6deg, #F46262 11.11%, #BE17CC 118.03%);
+    --GrayLine: #E0E0E0;
+    --Black: #000000;
+    --White: #ffffff;
+    --TxtBig: linear-gradient(139.6deg, #F54D4D 11.11%, #BE17CC 89.59%);
+    --Gray: #969696;
+    --GrayBckgrnd: linear-gradient(181.14deg, #F1F1F1 1.22%, #EBEBEB 97.57%);
+    --Black151515: #151515;
+    --Gray05: rgba(150, 150, 150, 0.5);
+}
+
+
+// Sizes
+$base-font-size: 16px;
+
+$tablet: 768;
+$large: 1024;
+$desktop: 1280;
+
+$content: 1920px;
+
+// Fonts
