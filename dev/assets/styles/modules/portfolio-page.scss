@@ -1,0 +1,22 @@
+.portfolio {
+    &-section {
+        padding-top: 48px;
+        padding-bottom: 122px;
+        overflow-x: hidden;
+    }
+    &-content {
+        padding-right: 168px;
+        @media (max-width: 1600px) {
+            padding-right: 130px;
+        }
+    }
+    &-list {
+        &__item {
+            margin-bottom: 80px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+

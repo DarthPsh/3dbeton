@@ -1,0 +1,30 @@
+.complet {
+    &-section {}
+    &-content {
+        display: flex;
+        &__links {
+            @include COND20;
+            a {
+                color: var(--Black);
+                opacity: 0.5;
+                display: block;
+                margin-bottom: 14px;
+                &:hover {
+                    opacity: 1;
+                    background: var(--Grad3);
+                    @include gradient-text;
+                }
+            }
+        }
+        &__title {
+            max-width: 315px;
+            @include H3-dim;
+        }
+        &__desc {
+            max-width: 774px;
+            p {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}

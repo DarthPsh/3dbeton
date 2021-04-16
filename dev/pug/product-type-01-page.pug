@@ -1,0 +1,79 @@
+extends layout/main
+
+block variables
+    -var title = 'Страница продукции 01'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") продукция 
+    +page-title('Ротонды, беседки, колоннады, перголы')
+    section.section.hero-section
+        .container
+            .hero-content 
+                .hero-content_left 
+                    .hero-content__img 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    .hero-content__gallery 
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/3500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/3500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x5000" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x5000", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения") Еще
+                            span.gallery-more__count
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                .hero-content_right
+                    .hero-content__info
+                        .hero-content__list 
+                            ul 
+                                li Проектирование
+                                li Изготовление
+                                li Доставка
+                                li Монтаж
+                        .hero-content__title 
+                            | Узнайте стоимость вашего 
+                            br
+                            |  проекта и 
+                            span
+                                | получите 
+                                br
+                                |  фото-привязку 
+                                br
+                                |  на местности бесплатно
+                            | !
+                        .hero-content__bot 
+                            .hero-content__bot-form 
+                                input(type="tel" placeholder="Ваш телефон")
+                                button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
+                            a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
+                                +icon('arr-down') 
+    section.section.complet-section
+        .container 
+            .complet-content
+                .complet-content__links 
+                    ul 
+                        li
+                            a(href="#") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
+                        li
+                            a(href="#") ПРЕИМУЩЕСТВА
+                        li
+                            a(href="#") ГОТОВЫЕ РЕШЕНИЯ
+                .complet-content__title Предлагаем изготовление ротонд и беседок, колоннад и пергол из высокопрочного стеклофибробетона и вандалостойкого стеклокомпозита
+                .complet-content__desc 
+                    p Широкий выбор фактур и цветов, в том числе подбор нужного Вам оттенка, различные варианты архитектурных решений – классические, стилизованые, с элементами балюстрады или ковки, имитацией меди/бронзы/позолоты для кровли и так далее. Исполним проект в любых габаритных размерах под ключ: от эскиза до монтажа готовой конструкции. Реализуем по Вашему проекту либо подберем готовое решение на Ваш вкус и бюджет.
+                    p Большой производственный опыт привел нас к выбору технологии изготовления цельнолитых пустотелых несущих конструкций БЕЗ ШВОВ, в отличие от широко применяющихся сейчас технологий обшивки несущего металлического каркаса скорлупками из стеклофибробетона либо стеклопластика, на которых имеющиеся продольные и иногда поперечные швы со временем трескаются и приходят в негодность. 
+                        br 
+                        | В отличие от других наши ротонды и колоннады после установки не требуют периодической доводки – окраски и шпаклевания: один раз смонтировать и наслаждаться в течение долгих лет эксплуатации.

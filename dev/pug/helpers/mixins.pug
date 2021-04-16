@@ -10,3 +10,8 @@ mixin section-title(data)
 	.section-title
 		h2.section-title__name= data.name
 		a(href=""+ data.href +"").section-title__link= data.link
+
+mixin page-title(name)
+	.page-title
+		.container 
+			h1.page-title__name= name

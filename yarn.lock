@@ -6075,6 +6075,11 @@
     "rechoir" "^0.6.2"
     "resolve" "^1.1.7"
 
+"lightbox2@^2.11.3":
+  "integrity" "sha512-Q4v6il/OK9ttgEkAxSok/jrI/LUbqTrePFchqP2x/59qaDIZgJjEEc5Xf7peSMc/55Zo5PAgmX6EiN/BeEeUBQ=="
+  "resolved" "https://registry.npmjs.org/lightbox2/-/lightbox2-2.11.3.tgz"
+  "version" "2.11.3"
+
 "limiter@^1.0.5":
   "integrity" "sha512-FWWMIEOxz3GwUI4Ts/IvgVy6LPvoMPgjMdQ185nN6psJyBJ4yOpzqm695/h5umdLJg2vW3GR5iG11MAkR2AzJA=="
   "resolved" "https://registry.npmjs.org/limiter/-/limiter-1.1.5.tgz"
@@ -6373,6 +6378,11 @@
   "integrity" "sha1-TjNms55/VFfjXxMkvfb4jQv8cwY="
   "resolved" "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-1.0.0.tgz"
   "version" "1.0.0"
+
+"lozad@^1.16.0":
+  "integrity" "sha512-JBr9WjvEFeKoyim3svo/gsQPTkgG/mOHJmDctZ/+U9H3ymUuvEkqpn8bdQMFsvTMcyRJrdJkLv0bXqGm0sP72w=="
+  "resolved" "https://registry.npmjs.org/lozad/-/lozad-1.16.0.tgz"
+  "version" "1.16.0"
 
 "lpad-align@^1.0.1":
   "integrity" "sha1-IfYArBwwlcPG5JfuZyce4ISB/p4="

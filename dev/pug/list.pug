@@ -1,0 +1,24 @@
+extends layout/main
+
+block variables
+    -var title = 'Продукция'
+
+block content
+    .container
+        h1 Список страниц
+        ul#page-list 
+            li 
+                a(href="/") Главная
+            li 
+                a(href="/product-page.html") Продукция
+            li 
+                a(href="/portfolio-page.html") Портфолио
+            li 
+                a(href="/product-type-01-page.html") Страница продукции 01
+
+    style.
+        #page-list li a {
+        display: block;
+        font-size: 20px;
+        margin-top: 15px;
+        }

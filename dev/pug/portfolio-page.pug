@@ -1,0 +1,412 @@
+extends layout/main
+
+block variables
+    -var title = 'Портфолио'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+    .container
+        .product-head 
+            .product-head__links 
+                .product-head__links-wrapper 
+                a(href="#").product-head__link Продукция
+                a(href="#").product-head__link.product-head__link_active Портфолио
+            .product-head__filter
+                .product-head__filter-select 
+                    .filter-select__title 
+                        span ПО ПОПУЛЯРНОСТИ
+                        +icon('shevron')
+                    ul
+                        li
+                            label ПО ПОПУЛЯРНОСТИ
+                                input(type="radio" name="sort" checked)
+                                .filter-select_active
+                        li
+                            label ПО АЛФАВИТУ
+                                input(type="radio" name="sort")
+                                .filter-select_active
+                .product-head__filter-btns
+                    .product-head__filter-grid.product-head__filter-btn 
+                        +icon('btn-grid')
+                    .product-head__filter-list.product-head__filter-btn
+                        +icon('btn-list')
+    section.section.portfolio-section
+        .container 
+            .section-content.portfolio-content 
+                .portfolio-list 
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Декоративные фасадные панели (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Ротонды, колоннады, перголы (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title РОТОНДА В ЖК «АЛЫЕ ПАРУСА» В МОСКВЕ  
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title   ПЕРГОЛЫ ГРАЧЕВСКОГО ПАРКА В МОСКВЕ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title   РОТОНДЫ ГРАЧЕВСКОГО ПАРКА В МОСКВЕ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title   ПОЛУРОТОНДЫ ПАРКА «АМАЗОНИЯ» В ВОРОНЕЖЕ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title   МАЛЫЕ АРХИТЕКТУРНЫЕ ФОРМЫ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title  заголовок  
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title  заголовок  
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурные решетки (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title АРХИТЕКТУРНЫЕ ФАСАДНЫЕ РЕШЕТКИ КОФЕЙНИ В ПЕНЗЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Скульптуры и статуи (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК «АЛЫЕ ПАРУСА» В НАРОВЧАТЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК «АЛЫЕ ПАРУСА» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК «АЛЫЕ ПАРУСА» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК «АЛЫЕ ПАРУСА» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурный декор общественных и жилых многоэтажных зданий (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасадный декор здания усадьбы XIX в. Соколовых-Сибиряковых В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Архитектурный декор ЖК «Клубный дом на Набережной» в Пензе
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Архитектурный декор исторического здания в ПЕНЗЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасад Кидзании «ТЕАТР» в ТЦ «Авиапарк» в МОСКВЕ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасады Кидзании: ГУМ в ТЦ «Авиапарк» в МОСКВЕ 
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурный декор коттеджей (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в «Золотой Подкове» в Пензе
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в «Золотой Подкове» в Пензе
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в Ростове-на-Дону
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Декоративные фасадные панели (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Ротонды, колоннады, перголы (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title РОТОНДА В ЖК «АЛЫЕ ПАРУСА» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img 
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ПЕРГОЛЫ ГРАЧЕВСКОГО ПАРКА В САНКТ-ПЕТЕРБУРГЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title РОТОНДЫ ГРАЧЕВСКОГО ПАРКА В ПЕНЗЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ПОЛУРОТОНДЫ ПАРКА «АМАЗОНИЯ» В ВОРОНЕЖЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title МАЛЫЕ АРХИТЕКТУРНЫЕ ФОРМЫ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурные решетки (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Архитектурные фасадные решетки Кофейни В ПЕНЗЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Скульптуры и статуи (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В НАРОВЧАТЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title СКУЛЬПТУРА В.И.ЛЕНИНА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурный декор общественных и жилых многоэтажных зданий (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасадный декор здания усадьбы XIX в. Соколовых-Сибиряковых В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Архитектурный декор ЖК «Клубный дом на Набережной» в Пензе
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Архитектурный декор исторического здания в ПЕНЗЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасад Кидзании «ТЕАТР» в ТЦ «Авиапарк» в МОСКВЕ 
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Фасады Кидзании: ГУМ в ТЦ «Авиапарк» в МОСКВЕ 
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Архитектурный декор коттеджей (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в «Золотой Подкове» в Пензе
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в п. Архангельское, МО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title Коттедж в Ростове-на-Дону
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Декоративные фасадные панели (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ “ВОЛНА” ДЛЯ ТЦ “КВАРТАЛ” ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА “ВК CAPITAL PALACE” В МОСКВЕ
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Ротонды, колоннады, перголы (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title РОТОНДА В ЖК “АЛЫЕ ПАРУСА” В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ПЕРГОЛЫ ГРАЧЕВСКОГО ПАРКА В САНКТ-ПЕТЕРБУРГЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title РОТОНДЫ ГРАЧЕВСКОГО ПАРКА В ПЕНЗЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ПОЛУРОТОНДЫ ПАРКА “АМАЗОНИЯ” В ВОРОНЕЖЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title МАЛЫЕ АРХИТЕКТУРНЫЕ ФОРМЫ

@@ -33,24 +33,7 @@ var swiper = new Swiper('.pageslider', {
 });
 
 
-// const prodImageContainerWrap = document.querySelectorAll('.production-list__item-inner');
-// const prodImageContainer = document.querySelectorAll('.production-list__item-img');
-// const prodImage = document.querySelectorAll('.production-list__item-img img');
 
-// for(let i = 0; prodImageContainer.length > 0; i++) {
-// 	prodImageContainer[i].addEventListener('mousemove', function(event) {
-// 		let xAxis = (prodImageContainer[i].offsetWidth / 2 - event.offsetX) / 10;
-// 		let yAxis = (prodImageContainer[i].offsetHeight / 2 - event.offsetY) / 10;
-// 		prodImage[i].style.transform = `rotateY(${-xAxis}deg) rotateX(${yAxis}deg)`;
-// 	});
-// 	prodImageContainer[i].addEventListener('mouseenter', function(event) {
-// 		prodImage[i].style.transition = `none`;
-// 	});
-// 	prodImageContainer[i].addEventListener('mouseleave', function(event) {
-// 		prodImage[i].style.transition = `all .5s ease`;
-// 		prodImage[i].style.transform = `rotateY(0deg) rotateX(0deg)`;
-// 	});
-// }
 
 let $prodLink = $('.production-list__item-link');
 let $prodImageContainer = $('.production-list__item-img');
@@ -69,3 +52,40 @@ $prodLink.on('mouseleave', function (event) {
     $(this).next($prodImageContainer).css({ "transition": "opacity .3s ease" });
     $(this).next($prodImageContainer).find($prodImage).css({ "transition": "transform .3s ease", "transform": "rotate(0deg)" });
 });
+
+
+
+$('.product-head__filter label').on("click", function () {
+    $('.filter-select__title span').text($(this).text());
+});
+$('.filter-select__title').on('click', function () {
+    $(this).next().toggleClass('is-active');
+})
+
+
+$(document).mouseup(function (e) { // событие клика по веб-документу
+    if (!$('.product-head__filter-select').is(e.target) // если клик был не по нашему блоку
+        && $('.product-head__filter-select').has(e.target).length === 0) { // и не по его дочерним элементам
+        $('.product-head__filter-select ul').removeClass('is-active');
+    }
+});
+
+
+$('.row-slider__wrap').each(function () {
+    let rowSliderCount = $(this).find('.row-slider__item').length;
+    $(this).find('.row-slider__count').text(rowSliderCount);
+});
+
+var swiper = new Swiper('.row-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 64,
+    navigation: {
+        nextEl: '.row-slider__controls-next',
+        prevEl: '.row-slider__controls-prev',
+    },
+});
+
+
+
+$('.gallery-more__count').html('&nbsp;' + $('.hero-content__gallery-more').length);
+

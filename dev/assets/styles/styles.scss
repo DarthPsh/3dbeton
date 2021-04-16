@@ -171,6 +171,19 @@ h2 {
   }
 }
 
+.page {
+  &-title {
+    &__name {
+      @include H2;
+      padding-bottom: 23px;
+      border-bottom: 1px solid var(--Black);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+}
+
 .section {
   &-title {
     padding: 13px 0 10px 0;
@@ -187,6 +200,136 @@ h2 {
         background: var(--Grad3);
         @include gradient-text;
       }
+    }
+  }
+}
+
+.super {
+  &-title {
+    white-space: nowrap;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ea7eb0;
+    width: $content;
+    margin: 0 64px;
+    @media (max-width: 1600px) {
+      margin-right: 0 !important;
+    }
+    @include gradient-text;
+    &__fill {
+      background: var(--Grad2);
+      @include gradient-text;
+    }
+  }
+}
+
+.breadcrumbs {
+  padding-top: 70px;
+  padding-bottom: 24px;
+  &-list {
+    display: flex;
+    &__item {
+      a {
+        @include COND20;
+        color: var(--Gray);
+        text-transform: uppercase;
+        margin-right: 5px;
+        &:hover {
+          background: var(--Grad3);
+          @include gradient-text;
+        }
+        &:after {
+          content: "/";
+        }
+      }
+    }
+  }
+}
+
+.pride {
+  &-section {
+    @media (max-width: 1600px) {
+        margin-right: 130px;
+    }
+  }
+  &-content {
+    padding-top: 77px;
+    padding-bottom: 114px;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 28px;
+    justify-items: center;
+    &__item {
+
+    }
+  }
+}
+
+.icon-shevron {
+  height: 14px;
+  width: 14px;
+}
+
+.row {
+  &-slider {
+    position: relative;
+    &__wrap {}
+    &__title {
+      @include H3;
+      margin-bottom: 29px; 
+    }
+    &__item {
+      width: 358px;
+      @include COND24;
+      text-transform: uppercase;
+      color: var(--Black);
+      &:hover {
+        background: var(--Grad3);
+        @include gradient-text;
+      }
+      &-img {
+        height: 290px;
+        position: relative;
+        margin-bottom: 16px;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    &__controls {
+      height: 290px;
+      width: 30px;
+      position: absolute;
+      z-index: 100;
+      top: 0;
+      left: 1640px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 1750px) {
+        left: 1220px;
+      }
+      &-btn {
+        padding-right: 5px;
+        flex-grow: 1;
+        padding-top: 15px;
+        cursor: pointer;
+        .svg-sprite-icon {
+          height: 31px;
+          width: 14px;
+          transform: rotate(180deg);
+        }
+      }   
+      &-next {transform: rotate(180deg);}
+      &-prev {}
     }
   }
 }

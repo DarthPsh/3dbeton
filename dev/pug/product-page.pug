@@ -1,0 +1,168 @@
+extends layout/main
+
+block variables
+    -var title = 'Продукция'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+    .container
+        .product-head 
+            .product-head__links 
+                .product-head__links-wrapper 
+                a(href="#").product-head__link.product-head__link_active Продукция
+                a(href="#").product-head__link Портфолио
+            .product-head__filter
+                .product-head__filter-select 
+                    .filter-select__title 
+                        span ПО ПОПУЛЯРНОСТИ
+                        +icon('shevron')
+                    ul
+                        li
+                            label ПО ПОПУЛЯРНОСТИ
+                                input(type="radio" name="sort" checked)
+                                .filter-select_active
+                        li
+                            label ПО АЛФАВИТУ
+                                input(type="radio" name="sort")
+                                .filter-select_active
+                .product-head__filter-btns
+                    .product-head__filter-grid.product-head__filter-btn 
+                        +icon('btn-grid')
+                    .product-head__filter-list.product-head__filter-btn
+                        +icon('btn-list')
+    section.section.product-section
+        .container 
+            .section-content.product-content 
+                .product-grid
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://i.pinimg.com/736x/1f/32/de/1f32de75ae0a1ac218a902f6f361a6d7.jpg", alt="img")
+                        .product-grid__item-title АРХИТЕКТУРНЫЙ ДЕКОР
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://d78hi7kj7xvs3.cloudfront.net/image/data/products/Leucanthemum-vulgare2.jpg", alt="img")
+                        .product-grid__item-title АРТ-ШАРЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://www.ixbt.com/img/n1/news/2019/5/3/chrome-73-mode-sombre-android_large.jpg", alt="img")
+                        .product-grid__item-title ГЛЫБЫ ИЗ БЕТОНА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title КОЛОННЫ ИЗ СТАЛЕФИБРОБЕТОНА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ФАСАДНЫЕ ПАНЕЛИ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ГЕРАЛЬДИКА, ОРДЕНА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ОБОЛОЧКИ РПУ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title Ж/Д ПЕРЕЕЗДЫ, ШПАЛЫ, ПЕРЕХОДЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title РОТОНДЫ, КОЛОННАДЫ, ПЕРГОЛЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ТЕАТРАЛЬНЫЕ ДЕКОРАЦИИ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title МОДЕЛИ, ФОРМА, ОСНАСТКА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title АЭРОДРОМНЫЕ ПЛИТЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title МАЛЫЕ АРХИТЕКТУРНЫЕ ФОРМЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ПАРАПЕТЫ, НАВЕРШИЯ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ЕМКОСТИ ИЗ СТЕКЛОПЛАСТИКА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ТРОТУАРНЫЕ ПОКРЫТИЯ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title АРХИТЕКТУРНЫЕ РЕШЕТКИ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title УТЯЖЕЛИТЕЛИ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title МЕТАЛЛОИЗДЕЛИЯ, КОВКА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ДЛИННОМЕРНЫЕ БОРДЮРЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title СКУЛЬПТУРЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ИНТЕРЬЕРНЫЙ ДЕКОР
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ОГРАЖДЕНИЯ БАЛКОНОВ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title РЕШЕТКИ ДЛЯ ПАРКОВКИ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ЦЕРКОВНОЕ УБРАНСТВО
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title СУВЕНИРЫ ИЗ БЕТОНА
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title КРУПНОФОРМАТНЫЕ ПЛИТЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title РАЗДЕЛИТЕЛИ ПОЛОС
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title АРТ-ОБЪЕКТЫ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title КАРТИНЫ НА БЕТОНЕ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title СБОРНЫЕ ПЕРЕКРЫТИЯ
+                    a(href="#").product-grid__item
+                        .product-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .product-grid__item-title ТЕННИСНЫЕ И БИЛЬЯРДНЫЕ СТОЛЫ	
