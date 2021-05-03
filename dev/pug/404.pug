@@ -1,0 +1,20 @@
+extends layout/main
+
+block variables
+    -var title = '404'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ошибка 404 
+    +page-title('Страница не найдена')
+    section.section.err404-section
+        .container 
+            .err404-content
+                .err404-img 
+                    img(src="/assets/images/common/404.png", alt="404")
+                .err404-info 
+                    h3.err404-info__title По таинственной причине этой страницы не существует. Пожалуйста, замените ваш URL или продолжите с главной страницы.
+                    a(href="/").err404-info__link.btn-fill НА ГЛАВНУЮ

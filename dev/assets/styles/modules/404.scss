@@ -1,0 +1,24 @@
+.err404 {
+    &-section {}
+    &-content {
+        display: flex;
+        padding-right: 130px;
+        padding-top: 56px;
+        padding-bottom: 93px;
+    }
+    &-info {
+        max-width: 480px;
+        padding-left: 40px;
+        &__title {
+            margin-bottom: 46px;
+            @include H3-dim;
+            @media (max-width: 1600px) {
+                margin-bottom: 34px;
+            }
+        }
+        &__link {
+            display: inline-block;
+            padding: 16px 102px;
+        }
+    }
+}

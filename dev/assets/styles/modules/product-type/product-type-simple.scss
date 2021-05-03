@@ -1,0 +1,101 @@
+.simple {
+    &-section {
+        overflow-x: hidden;
+    }
+    &-content {
+        padding-top: 63px;
+        padding-bottom: 95px;
+        // padding-right: 194px;
+    }
+    &-slider {
+        position: relative;
+        // max-width: 1622px;
+        &__item {
+            width: 779px;
+            @media (max-width: 1600px) {
+                width: 557px;
+            }
+            &-img {
+                height: 467px;
+                overflow: hidden;
+                position: relative;
+                margin-bottom: 24px;
+                @media (max-width: 1600px) {
+                    height: 320px;
+                }
+                img {
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+            }
+            &-title {
+                margin-bottom: 15px;
+                @include H3;
+            }
+        }
+        .swiper-slide {
+            .simple-slider__item {
+                &-img {
+                    opacity: .4;
+                }
+                &-title,
+                &-desc {
+                    display: none;
+                }
+            }
+            &-active,
+            &-next {
+                .simple-slider__item {
+                    &-img {
+                        opacity: 1;
+                    }
+                    &-title,
+                    &-desc {
+                        display: block;
+                    }
+                } 
+            }
+        }
+        &__control {
+            position: absolute;
+            z-index: 100;
+            display: flex;
+            left: 1685px;
+            @media (max-width: 1600px) {
+                left: 1190px;
+            }
+            .svg-sprite-icon {
+                fill: var(--Black);
+                stroke: var(--Black);
+                height: 100%;
+                width: 100%;
+            }
+            &-btn {
+                height: 30px;
+                top: 498px;
+                margin: 0;
+                cursor: pointer;
+                @media (max-width: 1600px) {
+                    top: 348px;
+                }
+            }
+            &_prev {
+                width: 36px;
+                margin-right: 19px;
+                left: auto;
+            }
+            &_next {
+                left: 52px;
+                width: 45px;
+            }
+            &_disabled {
+                background: transparent;
+            }
+        }
+    }
+}

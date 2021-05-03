@@ -1,0 +1,58 @@
+extends layout/main
+
+block variables
+    -var title = 'Портфолио страница объекта'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") продукция 
+    +page-title('Ротонда в ЖК «Алые Паруса»')
+    section.section.hero-section
+        .container
+            .hero-content 
+                .hero-content_left 
+                    .hero-content__img 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    .hero-content__gallery 
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/3500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/3500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x5000" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x5000", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения") Еще
+                            span.gallery-more__count
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                .hero-content_right
+                    .hero-content__info
+                        .hero-content__list 
+                            ul 
+                                li Год: 2017
+                                li г. Москва, ул. Авиационная, 77
+                                li для ООО «Строй-Делюкс»
+                        .hero-content__desc
+                            .hero-content__desc-block
+                                p Исполнение «под ключ» — создание визуализации по полученному эскизу, разработка и расчет конструктива, проектирование фундамента, изготовление элементов ротонды (несущий металлокаркас, колонны и архитрав из высокопрочного стеклофибробетона, кровля из стеклокомпозита имитирующего медь, декоративные элементы ковки), устройство фундаментов, монтаж элементов ротонды, финишная доводка с окрашиванием.
+                                    br
+                                    | Исполнение «под ключ» — создание визуализации по полученному эскизу, разработка и расчет конструктива, проектирование фундамента, изготовление элементов ротонды (несущий металлокаркас, колонны и архитрав из высокопрочного стеклофибробетона, кровля из стеклокомпозита имитирующего медь, декоративные элементы ковки), устройство фундаментов, монтаж элементов ротонды, финишная доводка с окрашиванием.
+                            button.hero-content__desc-btn.btn-empty Показать полностью
+                        .hero-content__bot 
+                            .hero-content__bot-form 
+                                input(type="tel" placeholder="Ваш телефон")
+                                button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
+                            a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
+                                +icon('arr-down') 

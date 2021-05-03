@@ -1,0 +1,99 @@
+.about {
+    &-section {}
+    &-content {
+        display: flex;
+        padding-top: 73px;
+        padding-bottom: 133px;
+        &__links {
+            @include COND20;
+            max-width: 359px;
+            width: 100%;
+            margin-right: 42px;
+            @media (max-width: 1600px) {
+                display: none;
+            }
+            ul {
+                border-left: 2px solid #8d8d8d;
+                li {
+                    max-width: 293px;
+                }
+            }
+            a {
+                color: var(--Black);
+                opacity: 0.5;
+                display: block;
+                margin-bottom: 14px;
+                padding-left: 20px;
+                &:hover {
+                    opacity: 1;
+                    background: var(--Grad3);
+                    @include gradient-text;
+                }
+            }
+        }
+        &__block {
+            &s {}
+            display: flex;
+            &-title {
+                max-width: 356px;
+                width: 100%;
+                margin-right: 66px;
+                @include H3;
+            }
+            &-desc {
+                max-width: 780px;
+                h4 {
+                    margin-top: 32px;
+                    margin-bottom: 24px;
+                    @include H4;
+                }
+                p {
+                    margin-bottom: 24px;
+                }
+                ul {
+                    li {
+                        margin-bottom: 15px;
+                        position: relative;
+                        padding-left: 31px;
+                        &:before {
+                            content: '';
+                            height: 9px;
+                            width: 9px;
+                            background: var(--White);
+                            position: absolute;
+                            display: block;
+                            left: 1px;
+                            border-radius: 50%;
+                            top: 6px;
+                            z-index: 100;
+                        }
+                        &:after {
+                            content: '';
+                            height: 11px;
+                            width: 11px;
+                            background: var(--Grad3);
+                            position: absolute;
+                            display: block;
+                            left: 0;
+                            border-radius: 50%;
+                            top: 5px;
+                        }
+                    }
+                    margin-bottom: 24px;
+                }
+                h4, ul, p {
+                    &:last-child {
+                        margin-bottom: 64px;
+                    }
+                }
+            }
+            &:last-child {
+                h4, ul, p {
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.features {
+    &-section {
+        @media (max-width: 1600px) {
+            padding-right: 130px;
+        }
+    }
+    &-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 48px;
+        padding-bottom: 109px;
+        max-width: 1624px;
+        column-gap: 64px;
+        row-gap: 40px;
+        @media (max-width: 1600px) {
+            column-gap: 40px;
+        }
+        &__block {
+            padding-right: 44px;
+            &-inner {
+                max-width: 733px;
+            }
+            &-img {
+                height: 112px;
+                width: 112px;
+                margin-bottom: 24px;
+                img {
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+            }
+            &-title {
+                margin-bottom: 20px;
+                @include H3;
+            }
+        }
+    }
+}

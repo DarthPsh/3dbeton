@@ -1,0 +1,210 @@
+extends layout/main
+
+block variables
+    -var title = 'Страница продукции 05'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") продукция 
+    +page-title('Корпоративные, бизнес подарки, рекламные сувениры, аксессуары для рабочего стола')
+    section.section.hero-section
+        .container
+            .hero-content 
+                .hero-content_left 
+                    .hero-content__img 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    .hero-content__gallery 
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/3500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/3500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x5000" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x5000", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения") Еще
+                            span.gallery-more__count
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                .hero-content_right
+                    .hero-content__info
+                        .hero-content__list 
+                            ul 
+                                li Укрепите отношения с бизнес-партнёрами, 
+                                    br
+                                    | сотрудниками и клиентами
+                                    br
+                                    | с помощью оригинальных сувениров 
+                                    br
+                                    | из бетона с вашим логотипом
+                        .hero-content__title 
+                            | Получите  
+                            span
+                                | презентацию-каталог 
+                                br
+                                | с ценами 
+                            | на сувенирную продукцию из бетона
+                        .hero-content__bot 
+                            .hero-content__bot-form 
+                                input(type="tel" placeholder="Ваш телефон")
+                                button.btn-fill.hero-content__bot-pdf ПОЛУЧИТЬ PDF
+                            button.btn-o.hero-content__bot-order СДЕЛАТЬ ЗАКАЗ
+    section.section.catalog-section
+        .container 
+            +section-title({name:'Каталог', link: '', href: ''})
+            .catalog-content
+                .catalog-grid
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Настольный органайзер
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Офисный набор с логотипом
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title ПОДСТАВКИ ПОД ЧАШКИ
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Часы настольные с логотипом
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Визитки из бетона
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title МАТРЕШКА
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Подсвечники
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title Часы настенные с логотипом
+                    .catalog-grid__item 
+                        .catalog-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        h3.catalog-grid__item-title КАРАНДАШНИЦА
+    section.section.example-section
+        .container
+            +section-title_b({name:'Изготовим изделия по примеру', link: '', href: ''})
+            .example-content
+                .row-slider.row-slider_h.swiper-slider 
+                    .row-slider__controls
+                        .row-slider__controls-btn.row-slider__controls-next
+                            +icon('arrow')
+                        .row-slider__controls-btn.row-slider__controls-prev
+                            +icon('arrow')
+                    .swiper-wrapper
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title ЛАМПА НАСТОЛЬНАЯ ИЗ ФИБРОБЕТОНА И МЕТАЛЛА
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title   ДЕРЖАТЕЛЬ ДЛЯ КЛЮЧЕЙ
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title  ДЕРЖАТЕЛЬ ДЛЯ КЛЮЧЕЙ
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title  ПОДАРОЧНЫЙ ФУТЛЯР ДЛЯ АЛКОГОЛЯ С ЛОГОТИПОМ
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title  ПОДАРОЧНЫЙ ФУТЛЯР ДЛЯ АЛКОГОЛЯ С ЛОГОТИПОМ
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title заголовок
+                        .example-block.row-slider__item.swiper-slide
+                            .row-slider__item-img.example-block__img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .row-slider__item-title   заголовок 
+            .example-banner__wrap 
+                .example-banner
+                    h3.example-banner__title Мы можем изготовить 
+                        br
+                        span любую сувенирную продукцию,  
+                        br 
+                        | корпоративные подарки,  
+                        br 
+                        | символы бренда из бетона и многое другое
+                    .example-banner__btns  
+                        button.btn-fill.example-banner__btn СДЕЛАТЬ ЗАКАЗ
+                        button.btn-o.example-banner__btn ПОЛУЧИТЬ ПРАЙС-ЛИСТ
+    section.section.simple-section
+        .container 
+            +section-title({name:'Выполненные проекты', link: '', href: ''})
+            .simple-content
+                .simple-slider.swiper-slider 
+                    .simple-slider__control
+                        .simple-slider__control-btn.simple-slider__control_prev.swiper-button-prev
+                            +icon('arr-left')
+                        .simple-slider__control-btn.simple-slider__control_next.swiper-button-next
+                            +icon('arr-right')
+                    .swiper-wrapper
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+                        .simple-slider__item.swiper-slide
+                            .simple-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            h3.simple-slider__item-title Карандашница из бетона
+                            .simple-slider__item-desc 
+                                p Была подарена нашей компанией Губернатору Пензенской области В.К. Бочкареву в феврале 2015 г., в ответ мы получили финансирование одного из наших социальных проектов "Книга", представляющего собой 3-метровый монумент, посвященный творчеству М.Ю. Лермонтова к 200-летию со дня его рождения.
+    section.section.pride-section
+        .container 
+            +section-title({name:'Нам доверяют', link: '', href: ''})
+            .section-content.pride-content 
+                .pride-grid
+                    .pride-grid__item
+                        img(src="/assets/images/common/pride-1.png", alt="img")
+                    .pride-grid__item
+                        img(src="/assets/images/common/pride-2.png", alt="img")
+                    .pride-grid__item
+                        img(src="/assets/images/common/pride-3.png", alt="img")

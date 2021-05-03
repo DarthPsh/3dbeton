@@ -1,4 +1,4 @@
-var swiper = new Swiper('.hero-slider', {
+var heroSlider = new Swiper('.hero-slider', {
     pagination: {
         el: '.hero-slider__pagination',
         type: 'fraction',
@@ -14,7 +14,13 @@ var swiper = new Swiper('.hero-slider', {
     },
 });
 
-var swiper = new Swiper('.pageslider', {
+$('.hero-content__desc-btn').on('click', function() {
+    $(this).prev('.hero-content__desc-block').toggleClass('is-show');
+})
+
+
+
+var pageSlider = new Swiper('.pageslider', {
     slidesPerView: 'auto',
     spaceBetween: 55,
     pagination: {
@@ -35,9 +41,9 @@ var swiper = new Swiper('.pageslider', {
 
 
 
-let $prodLink = $('.production-list__item-link');
-let $prodImageContainer = $('.production-list__item-img');
-let $prodImage = $('.production-list__item-img img');
+const $prodLink = $('.production-list__item-link');
+const $prodImageContainer = $('.production-list__item-img');
+const $prodImage = $('.production-list__item-img img');
 
 $prodLink.on('mousemove', function (event) {
     let xAxis = (this.offsetWidth / 2 - event.offsetX) / 10;
@@ -54,6 +60,25 @@ $prodLink.on('mouseleave', function (event) {
 });
 
 
+const $readymadeName = $('.readymade-list__item-name');
+const $readymadeImageContainer = $('.readymade-list__item-img');
+const $readymadeImage = $('.readymade-list__item-img img');
+
+$readymadeName.on('mousemove', function (event) {
+    let xAxis = (this.offsetWidth / 2 - event.offsetX) / 10;
+    let yAxis = (this.offsetHeight / 2 - event.offsetY) / 10;
+    $(this).next($readymadeImageContainer).find($readymadeImage).css("transform", `rotate(${xAxis}deg)`);
+})
+$readymadeName.on('mouseenter', function (event) {
+    $(this).next($readymadeImageContainer).css({ "transition": "opacity .3s ease" });
+    $(this).next($readymadeImageContainer).find($readymadeImage).css({ "transition": "transform .3s ease" });
+});
+$readymadeName.on('mouseleave', function (event) {
+    $(this).next($readymadeImageContainer).css({ "transition": "opacity .3s ease" });
+    $(this).next($readymadeImageContainer).find($readymadeImage).css({ "transition": "transform .3s ease", "transform": "rotate(0deg)" });
+});
+
+
 
 $('.product-head__filter label').on("click", function () {
     $('.filter-select__title span').text($(this).text());
@@ -63,6 +88,7 @@ $('.filter-select__title').on('click', function () {
 })
 
 
+// клики вне элементов
 $(document).mouseup(function (e) { // событие клика по веб-документу
     if (!$('.product-head__filter-select').is(e.target) // если клик был не по нашему блоку
         && $('.product-head__filter-select').has(e.target).length === 0) { // и не по его дочерним элементам
@@ -76,7 +102,7 @@ $('.row-slider__wrap').each(function () {
     $(this).find('.row-slider__count').text(rowSliderCount);
 });
 
-var swiper = new Swiper('.row-slider', {
+var rowSlider = new Swiper('.row-slider', {
     slidesPerView: 'auto',
     spaceBetween: 64,
     navigation: {
@@ -87,5 +113,54 @@ var swiper = new Swiper('.row-slider', {
 
 
 
+
+
 $('.gallery-more__count').html('&nbsp;' + $('.hero-content__gallery-more').length);
 
+
+
+var processSliderText = new Swiper('.process-info', {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    allowTouchMove: false,
+});
+var processSliderImg = new Swiper('.process-img', {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: '.process-nav__arrow_next',
+        prevEl: '.process-nav__arrow_prev',
+    },
+    thumbs: {
+        swiper: processSliderText
+    },
+    pagination: {
+        el: '.process-nav__pagination',
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    }
+});
+
+
+
+var simpleSlider = new Swiper('.simple-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    navigation: {
+        nextEl: '.simple-slider__control_next',
+        prevEl: '.simple-slider__control_prev',
+    },
+    breakpoints: {
+        1600: {
+            spaceBetween: 64,
+        },
+    },
+});
+
+
+// $('#menu_bottom').height();
+let montageGridItemInfo = document.querySelectorAll('.montage-grid__item-info');
+montageGridItemInfo[3].style.minHeight = montageGridItemInfo[2].clientHeight + 'px';

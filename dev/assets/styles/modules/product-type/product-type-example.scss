@@ -1,0 +1,124 @@
+.example {
+    &-section {}
+    &-content {
+        padding-top: 57px;    
+        padding-bottom: 130px;
+    }
+    &-block {
+        cursor: pointer;
+        &__img {
+            &:before {
+                content: '';
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                display: block;
+                position: absolute;
+                background: var(--Grad3);
+                z-index: 100;
+                opacity: 0;
+                transition: .3s;
+            }
+            &:after {
+                content: "ЗАПРОСИТЬ СТОИМОСТЬ";
+                background-image: url('/assets/images/common/ruble.svg');
+                background-repeat: no-repeat;
+                background-position: top center;
+                height: 115px;
+                width: 103px;
+                top: 50%;
+                left: 50%;
+                display: block;
+                position: absolute;
+                z-index: 100;
+                transform: translate(-50%, -50%);
+                transition: .2s;
+                @include COND20;
+                color: var(--White);
+                display: flex;
+                align-items: flex-end;
+                opacity: 0;
+            }
+        }
+        &:hover {
+            .example-block__img {
+                &:before {
+                    opacity: .74;
+                }
+                &:after {
+                    color: var(--White);
+                    -webkit-background-clip: unset; 
+                    -webkit-text-fill-color: var(--White);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-banner {
+        &__wrap {
+            padding-right: 130px;
+            padding-bottom: 114px;
+        }
+        padding: 54px 48px 64px;
+        background-image: url('/assets/images/common/kulon.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: contain;
+        position: relative;
+        @media (max-width: 1600px) {
+            background-position: 350px top;
+        }
+        @media (max-width: 1300px) {
+            background-size: cover;
+        }
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background: linear-gradient(180deg, #F1F1F1 0%, #F1F1F1 46.83%, #EAEAEA 100%);
+            z-index: -1;
+        }
+        &__title {
+            @include H3-dim;
+            margin-bottom: 188px;
+            @media (max-width: 1600px) {
+                max-width: 480px;
+            }
+            span {
+                background: var(--Grad3);
+                @include gradient-text;
+                @media (max-width: 1600px) {
+                    display: block;
+                }
+            }
+            br {
+                @media (max-width: 1600px) {
+                    display: none;
+                }
+            }
+        }
+        &__btn {
+            &s {
+                display: flex;
+                @media (max-width: 1600px) {
+                    flex-direction: column;
+                }
+            }
+            width: 280px;
+            margin-right: 16px;
+            padding: 16px 0;
+            @media (max-width: 1600px) {
+                margin-right: 0;
+                margin-bottom: 16px;
+            }
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+extends layout/main
+
+block variables
+    -var title = 'Услуги'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+    +page-title('Услуги')
+    section.section.complet-section
+        .container 
+            .complet-content.complet-content_b
+                .complet-content__banner 
+                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                .complet-content__info
+                    .complet-content__links 
+                        ul 
+                            li
+                                a(href="#") ПРОЕКТИРОВАНИЕ
+                            li
+                                a(href="#") ПРОИЗВОДСТВО
+                            li
+                                a(href="#") ДОСТАВКА
+                            li
+                                a(href="#") МОНТАЖ
+                    .complet-content__title Предлагаем исполнение проекта «под ключ» или его отдельных этапов
+                    .complet-content__desc 
+                        p Мы рады работать с вашим проектом в любой стадии проработки архитектурных и технических решений. Это могут быть как эскиз в карандаше или фото понравившегося объекта, так и сложные конструкторские расчеты самонесущих декоративных элементов или металлической подсистемы под габаритные изделия и конструкции.
+                        .complet-content__desc-btns 
+                            button.btn-fill.complet-content__desc-btn.complet-content__desc-order ЗАКАЗАТЬ ПРОЕКТ ПОД КЛЮЧ
+                            button.btn-o.complet-content__desc-btn.complet-content__desc-consult ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+    section.section.design-section
+        .container 
+            +section-title({name:'Проектирование', link: '', href: ''})
+            .design-content
+                .design-content__img 
+                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                .design-content__info
+                    .design-content__info-block 
+                        h4.design-content__info-title Работаем с проектами в любой стадии проработки
+                        .design-content__info-desc
+                            p Мы рады работать с вашим проектом в любой стадии проработки архитектурных и технических решений. Это могут быть как эскиз в карандаше или фото понравившегося объекта, так и сложные конструкторские расчеты самонесущих декоративных элементов или металлической подсистемы под габаритные изделия и конструкции.
+                    .design-content__info-block 
+                        h4.design-content__info-title Какие работы мы выполняем:
+                        .design-content__info-desc
+                            ul
+                                li эскизирование и моделирование изделий,
+                                li АР (прототип будущего объекта архитектурный облик),
+                                li КМД ( деталировочные чертежи элементов с закладными),
+                                li КМ (рабочая документация с конструкторским расчетом),
+                                li ППР (монтажные схемы, инструкции по монтажу)
+                            button.btn-o заказать
+    section.section.ourprod-section
+        .container 
+            +section-title({name:'Производство', link: '', href: ''})
+            .ourprod-content
+                .ourprod-info 
+                    h3.ourprod-info__title У нас собственные производственные цеха в Пензе
+                    .ourprod-info__desc 
+                        h4 Опыт наших специалистов и наши производственные возможности позволяют реализовать любой проект, любую вашу идею
+                        p Мы рады работать с вашим проектом в любой стадии проработки архитектурных и технических решений. Это могут быть как эскиз в карандаше или фото понравившегося объекта, так и сложные конструкторские расчеты  самонесущих декоративных элементов или металлической подсистемы под габаритные изделия и конструкции. Это могут быть как эскиз в карандаше или фото понравившегося объекта, так и сложные конструкторские расчеты самонесущих декоративных элементов или металлической подсистемы под габаритные изделия и конструкции.
+                .ourprod-grid 
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                    .ourprod-grid__item
+                        .ourprod-grid__item-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .ourprod-grid__item-title заголовок
+                .ourprod-banner 
+                    .ourprod-banner__info
+                        h3.ourprod-banner__title Мы можем изготовить для вашего проекта детали из 
+                            span разнообразных материалов:
+                        ul.ourprod-banner__list
+                            li.ourprod-banner__list-item
+                                a(href="#") 
+                                    span высокопрочного фибробетона 
+                                    br
+                                    span (3D-бетона)
+                            li.ourprod-banner__list-item
+                                a(href="#") 
+                                    span легкого стеклокомпозита
+                            li.ourprod-banner__list-item
+                                a(href="#") 
+                                    span металла и ковки
+                            li.ourprod-banner__list-item
+                                a(href="#") 
+                                    span дерева и фанеры 
+                        .ourprod-banner__btns 
+                            button.ourprod-banner__btn.btn-fill СДЕЛАТЬ ЗАКАЗ
+                            button.ourprod-banner__btn.btn-o СДЕЛАТЬ ЗАКАЗ
+                    .ourprod-banner__img
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+    section.section.delivery-section
+        .container 
+            +section-title({name:'Доставка', link: '', href: ''})
+            .delivery-content
+                .delivery-content__info
+                    .delivery-content__info-desc
+                        p Поможем организовать доставку деталей до вашего объекта в любой точке России и ближнего зарубежья.  Адаптируем наш график производства и доставки деталей под ваш график строительства.  
+                        p Наши производственные цеха находятся в Пензе, откуда мы уже успешно организовали доставку и реализовали проекты более чем в 35 городах России, а также в Белоруссии 
+                    .delivery-content__info-logos
+                        .delivery-content__info-logo 
+                            img(src="/assets/images/common/pek.png", alt="logo")
+                        .delivery-content__info-logo 
+                            img(src="/assets/images/common/dline.png", alt="logo")
+                        .delivery-content__info-logo 
+                            img(src="/assets/images/common/cdek.png", alt="logo")
+                    a.delivery-content__info-more.btn-o(href="#") УЗНАТЬ ПОДРОБНОСТИ
+    section.section.montage-section
+        .container 
+            +section-title({name:'Монтаж «под ключ»', link: '', href: ''})
+            .montage-content
+                .montage-grid 
+                    .montage-grid__item
+                        .montage-grid__item-info
+                            .montage-grid__item-desc 
+                                p Выполняем все необходимые работы по монтажу, начиная с устройства фундамента для малых архитектурных форм или с установки несущей фасадной подсистемы для панелей / архитектурных элементов и заканчивая финишной отделкой с герметизацией швов. Предоставляем гарантию на выполненные работы.
+                    .montage-grid__item
+                        .montage-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .montage-grid__item-info
+                            h3.montage-grid__item-title Монтаж фасадных панелей под ключ
+                            .montage-grid__item-desc
+                                p Состав работ: устройство фундамента, установка несущего металлокаркаса , монтаж колонн из стеклофибробетона и антаблемента из стеклокомпозита , финишная отделка с герметизацией швов
+                    .montage-grid__item
+                        .montage-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .montage-grid__item-info
+                            h3.montage-grid__item-title Монтаж ротонды под ключ
+                            .montage-grid__item-desc 
+                                p Состав работ: устройство фундамента, установка несущего металлокаркаса , монтаж колонн из стеклофибробетона и антаблемента из стеклокомпозита , финишная отделка с герметизацией швов
+                    .montage-grid__item
+                        .montage-grid__item-img
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .montage-grid__item-info
+                            h3.montage-grid__item-title Монтаж архитектурного декора под ключ
+                            .montage-grid__item-desc 
+                                p Состав работ: подсистема, элементы из стеклофибробетона и стеклокомпозита, финишная отделка с герметизацией швов
+                button.btn-o.montage-more заказать

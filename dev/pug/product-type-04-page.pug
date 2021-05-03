@@ -1,0 +1,206 @@
+extends layout/main
+
+block variables
+    -var title = 'Страница продукции 04'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") продукция 
+    +page-title('Формы, оснастка, матрицы')
+    section.section.hero-section
+        .container
+            .hero-content 
+                .hero-content_left 
+                    .hero-content__img 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    .hero-content__gallery 
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/3500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/3500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x5000" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x5000", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="http://placehold.it/500x500" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="http://placehold.it/500x500", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-img(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения") Еще
+                            span.gallery-more__count
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
+                .hero-content_right
+                    .hero-content__info
+                        .hero-content__list 
+                            ul 
+                                li Проектирование
+                                li Изготовление
+                                li Доставка
+                        .hero-content__title Оставьте заявку на расчет стоимости моделей, форм, матриц для производства необходимых вам изделий
+                        .hero-content__bot 
+                            .hero-content__bot-form 
+                                input(type="tel" placeholder="Ваш телефон")
+                                button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
+                            a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
+                                +icon('arr-down') 
+    section.section.complet-section
+        .container 
+            .complet-content
+                .complet-content__info
+                    .complet-content__links 
+                        ul 
+                            li
+                                a(href="#") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
+                            li
+                                a(href="#") ПРЕИМУЩЕСТВА
+                            li
+                                a(href="#") ГОТОВЫЕ РЕШЕНИЯ
+                    .complet-content__title Производим модели, формы, матрицы и оснастки для изделий из фибробетона, ЦСП, фиброцементных плит
+                    .complet-content__desc 
+                        p Производим всю необходимую оснастку – модели, формы, матрицы для изготовления изделий из бетона и фибробетона, фиброцементных панелей, цементно-стружечных плит, 3d-панелей, архитектурных элементов (карнизов, колонн, пилястр, балюстрад, молдингов, розеток, барельефов), скульптур, малых архитектурных форм (вазонов, скамей, урн, ограничителей парковки) и многого другого под заказ из стеклопластика, силикона, полиуретана, тонкого пластика ПВХ, а также дерева, фанеры и металла.
+    section.section.fabricate-section
+        .container 
+            +section-title({name:'Изготовим для вас', link: '', href: ''})
+            .section-content.fabricate-content
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title 3d-модель будущего изделия
+                        p.fabricate-content__block-desc Создается по эскизу или чертежу, фотографии существующего изделия, либо устному описанию пожеланий дизайна и габаритных размеров
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Высокоточные модели
+                        p.fabricate-content__block-desc Высокоточные модели необходимой геометрической формы и деталировки в материале. Изготавливаются из МДФ, дерева, модельного пластика или воска с помощью 3d-фрезерования на станках ЧПУ.
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Мягкие силиконовые формы
+                        p.fabricate-content__block-desc Применяются для объемных изделий сложной геометрической формы с высокой степенью детализации поверхности. Для сохранения геометрии мягкий силикон одевается в жесткий разборный стеклопластиковый кожух. Оборачиваемость: до 100 отливок
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Долговечные полиуретановые формы
+                        p.fabricate-content__block-desc Из полиуретана различной твердости по Шору, применяются для изделий сложной геометрической формы, при отсутствии в них «замков», отсутствует необходимость применения жесткого кожуха. Оборачиваемость: до 300 отливок
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Матрицы из стеклопластика
+                        p.fabricate-content__block-desc Для плоских изделий и объемных изделий простой геометрической формы изготавливаем из эпоксидной или полиэфирной матричной смолы, армированной стеклотканью. Оборачиваемость: до 50 отливок. Являются ремонтопригодными
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Тонкие формы по технологии термоваккуумного прессования из пластика ПВХ
+                        p.fabricate-content__block-desc Применяются для простых изделий малого тиража – плоских либо высотой не более 25 см. Габаритные размеры термоваккуумного стола – 2,5х1,2 м. Оборачиваемость: до 30 отливок
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Формы из дерева и фанеры
+                        p.fabricate-content__block-desc Изготавливаются из влагостойких материалов для отливки или напыления простых изделий из бетона и фибробетона малого тиража. Оборачиваемость: до 30 отливок.
+                .fabricate-content__block
+                    .fabricate-content__block-inner
+                        .fabricate-content__block-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        h3.fabricate-content__block-title Формы из металла
+                        p.fabricate-content__block-desc Применяются для заливки тяжелых габаритных изделий из бетона простой геометрической формы. При эксплуатации необходимо использовать разделитель. Оборачиваемость: свыше 500 отливок.
+                button.fabricate-content__btn.btn-o ЗАКАЗАТЬ
+    section.section.readymade-section
+        .container 
+            +section-title_b({name:'Готовые решения', link: '', href: ''})
+            .section-content.readymade-content
+                .readymade-content__img
+                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                .readymade-content__info 
+                    .readymade-content__title-wrap 
+                        h3.readymade-content__title Фактурные матрицы для производства 
+                            br 
+                            | цементно-стружечных плит стандартных размеров 
+                            br
+                            | 3350х1430 мм
+                        button.readymade-content__btn.btn-fill ЗАКАЗАТЬ
+                    .readymade-content__desc 
+                        .readymade-content__desc_left
+                            h3.readymade-content__desc-title Варианты текстур
+                            ul.readymade-list 
+                                li.readymade-list__item
+                                    span.readymade-list__item-name тисненый кирпич
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name штукатурка
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name колотый камень
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name базальт
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name дерево
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name сланец
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name колотый кирпич
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                li.readymade-list__item
+                                    span.readymade-list__item-name булыжник
+                                    .readymade-list__item-img
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .readymade-content__desc_right
+                            h3.readymade-content__desc-title Нужна другая текстура?
+                            p Изготовим на заказ любую текстуру по вашему желанию. Достаточно прислать нам фото понравившегося изделия и желаемые габариты!
+    section.section.features-section
+        .container 
+            +section-title({name:'Преимущества заказа оснастки и форм у нас', link: '', href: ''})
+            .section-content.features-content
+                .features-content__block
+                    .features-content__block-inner
+                        .features-content__block-img 
+                            img(src="/assets/images/common/f-cube.png", alt="img")
+                        h3.features-content__block-title Любые размеры, цвета и фактуры
+                        p.features-content__block-desc Мы производим оснастку как для небольших изделий – например визиток и сувениров из бетона, так и для изделий огромных габаритных размеров – к примеру целиковые формы колонн длиной 18 метров! подберем абсолютно любую заданную текстуру.
+                .features-content__block
+                    .features-content__block-inner
+                        .features-content__block-img 
+                            img(src="/assets/images/common/heart.png", alt="img")
+                        h3.features-content__block-title Делаем, как для себя
+                        p.features-content__block-desc Мы производим малые архитектурные формы нового поколения и знаем не понаслышке о необходимом качестве оснастки – четкой геометрии форм, необходимой оборачиваемости и отсутствии залипов.
+                .features-content__block
+                    .features-content__block-inner
+                        .features-content__block-img 
+                            img(src="/assets/images/common/recycle.png", alt="img")
+                        h3.features-content__block-title Высокая оборачиваемость
+                        p.features-content__block-desc Мы производим архитектурные формы из бетона по проверенным и отработанным технологиям и можем гарантировать максимально высокую оборачиваемость матриц при правильном и бережном к ним отношении.
+                .features-content__block
+                    .features-content__block-inner
+                        .features-content__block-img 
+                            img(src="/assets/images/common/precise.png", alt="img")
+                        h3.features-content__block-title Высокая точность
+                        p.features-content__block-desc достигается нами за счет применения технологий 3d-фрезерования с помощью ЧПУ вместо широко применяемого ручного формования. Мы создаем сложные архитектурные элементы без отклонений от заданных параметров
+                .features-content__block
+                    .features-content__block-inner
+                        .features-content__block-img 
+                            img(src="/assets/images/common/calc.png", alt="img")
+                        h3.features-content__block-title Подберем под ваш бюджет
+                        p.features-content__block-desc Мы работаем с разными видами силиконов, полиуретанов и смол производства разных стран и понимаем, что ожидать от каждого материала – китайского, европейского или российского производства – при понимании заданного количества съемов с формы и понимании Вашего бюджета, мы обязательно подберем подходящее решение!

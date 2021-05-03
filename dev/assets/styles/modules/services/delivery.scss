@@ -1,0 +1,53 @@
+.delivery {
+    &-section {
+        background-image: url('/assets/images/common/MapBeton.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% + 375px) 105px;
+        @media (min-width: 2400px) {
+            background-position: 100% 110px;
+        }
+        @media (max-width: 1600px) {
+            background-position: calc(100% + 910px) 105px;
+        }
+    }
+    &-content {
+        padding-top: 50px;
+        padding-bottom: 300px;
+        @media (max-width: 1600px) {
+            padding-bottom: 185px;
+        }
+        &__info {
+            &-desc {
+                max-width: 553px;
+                padding-bottom: 39px;
+                p {
+                    margin-bottom: 35px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            &-logo {
+                &s {
+                    display: flex;
+                    padding-bottom: 70px;
+                }
+                width: 133px;
+                height: 40px;
+                margin-right: 45px;
+                img {
+                    max-height: 100%;
+                    max-width: 100%;
+                    margin: auto;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            &-more {
+                padding: 16px 40px;
+                display: inline-block;
+            }
+        }
+    }
+}

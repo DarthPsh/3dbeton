@@ -1,7 +1,7 @@
 extends layout/main
 
 block variables
-    -var title = 'Страница продукции 01'
+    -var title = 'Страница продукции 02'
 
 block content
     .breadcrumbs
@@ -11,7 +11,7 @@ block content
                     a(href="/") ГЛАВНАЯ 
                 li.breadcrumbs-list__item 
                     a(href="/") продукция 
-    +page-title('Ротонды, беседки, колоннады, перголы')
+    +page-title('Архитектурный декор')
     section.section.hero-section
         .container
             .hero-content 
@@ -33,8 +33,6 @@ block content
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
                         a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения") Еще
                             span.gallery-more__count
-                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
-                        a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
                         a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
                         a.hero-content__gallery-item.hero-content__gallery-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-gallery" data-title="заголовок изображения")
                 .hero-content_right
@@ -74,12 +72,11 @@ block content
                                 a(href="#") ПРЕИМУЩЕСТВА
                             li
                                 a(href="#") ГОТОВЫЕ РЕШЕНИЯ
-                    .complet-content__title Предлагаем изготовление ротонд и беседок, колоннад и пергол из высокопрочного стеклофибробетона и вандалостойкого стеклокомпозита
+                    .complet-content__title Архитектурный фасадный декор из высокопрочного стеклофибробетона (GFRC) нового поколения, легкого фасадного стеклокомпозита, гипса и фиброгипса (GFRG)
                     .complet-content__desc 
-                        p Широкий выбор фактур и цветов, в том числе подбор нужного Вам оттенка, различные варианты архитектурных решений – классические, стилизованые, с элементами балюстрады или ковки, имитацией меди/бронзы/позолоты для кровли и так далее. Исполним проект в любых габаритных размерах под ключ: от эскиза до монтажа готовой конструкции. Реализуем по Вашему проекту либо подберем готовое решение на Ваш вкус и бюджет.
-                        p Большой производственный опыт привел нас к выбору технологии изготовления цельнолитых пустотелых несущих конструкций БЕЗ ШВОВ, в отличие от широко применяющихся сейчас технологий обшивки несущего металлического каркаса скорлупками из стеклофибробетона либо стеклопластика, на которых имеющиеся продольные и иногда поперечные швы со временем трескаются и приходят в негодность. 
-                            br 
-                            | В отличие от других наши ротонды и колоннады после установки не требуют периодической доводки – окраски и шпаклевания: один раз смонтировать и наслаждаться в течение долгих лет эксплуатации.
+                        p Производим архитектурные элементы с гарантией качества: обрамления проемов, карнизы, колонны, пилястры, балюстрады, панно, рустовые и замковые камни, кронштейны, барельефы, розетки, консоли, входные группы и многое другое.
+                        p Стеклофибробетон (GFRC) нового поколения, фасадный стеклокомпозит, гипс и фиброгипс (GFRG) – современные материалы, которые отличаются высокой прочностью, легкостью и надежностью.
+                        p Уникальные свойства наших материалов позволяют изготавливать фасадные элементы в любом цветовом решении и самой различной текстуры - песчаник, травертин, гранит, известняк, мрамор и другие виды натурального камня, а также дерево, фарфор, металл, глянцевые и глазурованные фактуры и многое другое. Подберем фактуру и нужный Вам оттенок, предложим различные варианты архитектурных решений - исполним проект в любых габаритных размерах под ключ: от стадии проектирования до монтажа и обслуживания готовых конструкций.
     section.section.pageslider-section
         .container 
             +section-title({name:'Выполненные проекты', link: 'ВСЕ ПРОЕКТЫ', href: '#'})
@@ -143,20 +140,20 @@ block content
                     .slider-control__pagination.swiper-pagination.pageslider-pagination
     section.section.features-section
         .container 
-            +section-title({name:'Почему ротонды заказывают у нас', link: '', href: ''})
+            +section-title({name:'Почему архитектурный декор заказывают у нас', link: '', href: ''})
             .section-content.features-content
                 .features-content__block
                     .features-content__block-inner
                         .features-content__block-img 
-                            img(src="/assets/images/common/trophy.png", alt="img")
-                        h3.features-content__block-title Качество применяемых материалов
-                        p.features-content__block-desc Для производства изделий мы используем годами отработанные проверенные и сертифицированные составы высокопрочного фибробетона и вандалостойкого стеклокомпозита. Все наши материалы обладают высокими физико-техническими показателями – марка прочности на сжатие (М800 – М2000), морозостойкости (более 1000 циклов!), коррозионной стойкости, что превосходит существующие на рынке аналоги – стеклофибробетон, архитектурный бетон и даже натуральный камень! и позволяет гарантировать длительный срок службы изделий и конструкций.
+                            img(src="/assets/images/common/pyramids.png", alt="img")
+                        h3.features-content__block-title Долговечность
+                        p.features-content__block-desc Мы применяем сертифицированные составы высокопрочного фибробетона нового поколения и легкого стеклокомпозита, обладающие высокими физико-техническими показателями – марка прочности на сжатие (М800 – М2000), морозостойкости (от 500 до 1000 циклов!), что превосходит существующие на рынке аналоги – обычный стеклофибробетон, архитектурный бетон и даже натуральный камень! и позволяет гарантировать длительный срок службы изделий и конструкций без необходимости в ремонте и реставрации.
                 .features-content__block
                     .features-content__block-inner
                         .features-content__block-img 
-                            img(src="/assets/images/common/sertif.png", alt="img")
-                        h3.features-content__block-title Сертификаты на всю продукцию
-                        p.features-content__block-desc Предоставим по запросу: сертификаты соответствия требованиям нормативных документов с протоколами сертификационных испытаний физико-технических показателей (прочностные показатели, влагопоглощение, морозостойкость), сертификаты пожарной безопасности изделий с протоколами сертификационных испытаний (горючесть, воспламеняемость, дымообразующая способность, токсичность)
+                            img(src="/assets/images/common/f-cube.png", alt="img")
+                        h3.features-content__block-title Любые размеры, цвета и фактуры
+                        p.features-content__block-desc Рады предложить Вам изготовление элементов архитектурного фасадного декора абсолютно любых габаритных размеров, подберем нужный оттенок материала в соответствии с Вашими пожеланиями, при необходимости изготовим изделия с фактурой – гранита, песчаника, известняка, травертина и других видов камня, а также дерева, фармора, металла, глянцевые и глазурованные поверхности. Подберем необходимые цвет и фактуру по предоставленной фотографии или образцу.
                 .features-content__block
                     .features-content__block-inner
                         .features-content__block-img 
@@ -166,9 +163,9 @@ block content
                 .features-content__block
                     .features-content__block-inner
                         .features-content__block-img 
-                            img(src="/assets/images/common/f-cube.png", alt="img")
-                        h3.features-content__block-title Любые размеры, цвета и фактуры
-                        p.features-content__block-desc Рады предложить Вам изготовление ротонд, колоннад и других изделий абсолютно любых габаритных размеров, подберем нужный тон материала в соответствии с Вашими пожеланиями, при необходимости изготовим изделия с фактурой – гранита, песчаника, известняка и т.д., либо подберем полностью нужный Вам вариант по предоставленному образцу или картинке.
+                            img(src="/assets/images/common/f-crown.png", alt="img")
+                        h3.features-content__block-title Совершенство и точность форм
+                        p.features-content__block-desc Достигаются нами за счет применения роботизированных технологий 3d-резьбы моделей вместо широко применяемого ручного формования. Мы создаем лепнину и сложные архитектурные элементы без отклонений от утвержденных Заказчиком моделей.
                 .features-content__block
                     .features-content__block-inner
                         .features-content__block-img 
@@ -274,3 +271,138 @@ block content
                             p Изготовим за 50 рабочих дней (доставка не входит в цену)
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 button.prepared-show-more ПОКАЗАТЬ ЕЩЕ
+    section.section.process-section
+        .container 
+            +section-title({name:'Процесс производства', link: '', href: ''})
+            .section-content.process-content
+                .process-content_left 
+                    .process-img.swiper-container
+                        .swiper-wrapper
+                            .process-img__item.swiper-slide 
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .process-img__item.swiper-slide 
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .process-img__item.swiper-slide 
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                .process-content_right
+                    .process-nav 
+                        .process-nav__pagination.swiper-pagination
+                        .process-nav__arrows
+                            .process-nav__arrow.process-nav__arrow_prev.swiper-button-prev
+                                +icon('arr-left')
+                            .process-nav__arrow.process-nav__arrow_next.swiper-button-next
+                                +icon('arr-right')
+                    .process-info.swiper-container
+                        .swiper-wrapper
+                            .process-info__item.swiper-slide
+                                h3.process-info__item-title Разработка проекта
+                                .process-info__item-desc
+                                    p В первую очередь прорабатывается детальный проект будущей скульптуры – это может быть 3d-модель, либо карандашный эскиз, либо объемный эскиз, исполненный в небольшом масштабе в пластилине, в зависимости от выбранного заказчиком материала и следовательно технологии производства изделия.
+                                    p Эскиз согласовывается и при необходимости дорабатывается в соответствие с замечаниями заказчика.
+                            .process-info__item.swiper-slide
+                                h3.process-info__item-title Изготовление формы
+                                .process-info__item-desc
+                                    p Изготовливаем мастер-модели в материале на основании согласованной трехмерной модели с помощью резьбы на высокоточном оборудовании с ЧПУ. Производим ручную доводку моделей, наносим разделители.
+                            .process-info__item.swiper-slide
+                                h3.process-info__item-title Изготовление формы
+                                .process-info__item-desc
+                                    p Изготовливаем мастер-модели в материале на основании согласованной трехмерной модели с помощью резьбы на высокоточном оборудовании с ЧПУ. Производим ручную доводку моделей, наносим разделители.
+    section.section.about-section
+        .container 
+            +section-title({name:'О материалах и стоимости', link: '', href: ''})
+            .about-content
+                .about-content__links 
+                    ul 
+                        li
+                            a(href="#") СТОИМОСТЬ
+                        li
+                            a(href="#") ПОЧЕМУ ФИБРОБЕТОН?
+                        li
+                            a(href="#") ПОЧЕМУ СТЕКЛОКОМПОЗИТ? 
+                        li
+                            a(href="#") ПОЧЕМУ ГИПС?
+                        li
+                            a(href="#") ЗАЧЕМ НУЖЕН АРХИТЕКТУРНЫЙ ДЕКОР? 
+                .about-content__blocks
+                    .about-content__block
+                        h3.about-content__block-title Стоимость
+                        .about-content__block-desc 
+                            p Цены на изделия рассчитываются индивидуально для каждого заказа. Каждый проект имеет свои нюансы: уникальность элементов, сложность форм, рациональность применения тех или иных материалов, которые определяют окончательную стоимость. В любом случае, вы можете быть уверены, что наши цены на архитектурный декор вас приятно удивят.
+                    .about-content__block
+                        h3.about-content__block-title Почему фибробетон?
+                        .about-content__block-desc 
+                            p Современный архитектурный декор должен выдерживать значительные колебания температур, повышенную влажность, влияние ультрафиолетовых лучей и при этом отличаться изяществом и оригинальностью форм. Такая задача под силу технологически совершенному материалу, каковым является фибробетон/стеклофибробетон. Этот материал получил признание архитекторов и 
+                            p высокой прочности, малому весу готовых изделий, стойкости к механическим воздействиям и разнообразным погодным условиям. Кроме того, данный материал устойчив к коррозии и не является горючим. Фибробетон – это решение, позволяющее воплотить в жизнь самые смелые и оригинальные идеи в архитектурном дизайне. Как результат – создание долговечного, надежного и эстетически совершенного декора.
+                            h4 Преимущества архитектурного декора из фибробетона:
+                            ul 
+                                li легче, прочнее и долговечнее традиционного архитектурного бетона;
+                                li устойчив к механическим воздействиям, коррозии, образованию трещин;
+                                li является негорючим материалом;
+                                li водонепроницаем;
+                                li позволяет создавать выразительный декор различных фактур и цветовых решений.
+                    .about-content__block
+                        h3.about-content__block-title Почему стеклокомпозит?
+                        .about-content__block-desc 
+                            p Стеклокомпозит (стеклопластик) с середины прошлого столетия отлично зарекомендовал себя в машиностроении и производстве лодок, в настоящее время нашел широкое применение в строительстве зданий и сооружений, фасадном декоре и элементах ландшафтного дизайна и мн. др. Данный композитный материал позволяет воплотить в жизнь самые разные и сложные проекты в сфере архитектуры и дизайна, реставрации и отделки.
+                            h4 Преимущества архитектурного декора из стеклокомпозита:
+                            ul 
+                                li наименьший вес изделий в сравнении с любыми аналогами,
+                                li стойкость к атмосферному воздействию окружающей среды,
+                                li возможность изготовления габаритных изделий сложной формы,
+                                li высокая ремонтопригодность изделий,
+                                li химическая инертность и коррозионная стойкость.
+                    .about-content__block
+                        h3.about-content__block-title Почему гипс?
+                        .about-content__block-desc 
+                            p Традиционное, проверенное веками решение для создания фасадного и интерьерного декора, лепнины, отличающееся совершенством, прочностью и удобством работы с материалом.
+                            h4 Преимущества архитектурного декора из гипса и фиброгипса:
+                            ul 
+                                li наибольшая скорость и простота изготовления,
+                                li возможность изготовления декора на объекте,
+                                li малый вес по сравнению с традиционным камнем,
+                                li не горюч, обладает огнезащитными свойствами,
+                                li удобство работы с материалом.
+                    .about-content__block
+                        h3.about-content__block-title Зачем нужен архитектурный декор?
+                        .about-content__block-desc 
+                            p Архитектурный декор способен преобразить любое здание, придать ему изысканность, утонченность, эстетическую выразительность. Стоит только добавить оригинальные колонны и балюстрады, пилястры и русты и даже самое заурядное здание заиграет новыми красками. Специалисты нашей компании создадут архитектурный декор исходя из индивидуальных предпочтений Заказчика. Это могут быть как традиционные элементы декора, так и уникальные, не имеющие аналогов.
+    section.section.other-section
+        .container 
+            +section-title({name:'Другие продукты из стеклобетона и стеклофиброкомпозита', link: '', href: ''})
+            .other-content
+                .row-slider__wrap
+                    .row-slider.swiper-slider 
+                        .row-slider__controls
+                            .row-slider__controls-btn.row-slider__controls-next
+                                +icon('arrow')
+                            .row-slider__controls-btn.row-slider__controls-prev
+                                +icon('arrow')
+                        .swiper-wrapper
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title ФАСАДНЫЕ ПАНЕЛИ
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title МАЛЫЕ АРХИТЕКТУРНЫЕ ФОРМЫ 
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title ТЕАТРАЛЬНЫЕ ДЕКОРАЦИИ
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title СКУЛЬПТУРЫ
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title заголовок
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title заголовок
+                            a(href="#").row-slider__item.swiper-slide
+                                .row-slider__item-img
+                                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .row-slider__item-title заголовок
