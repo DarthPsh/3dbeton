@@ -1,0 +1,32 @@
+.tabs {
+    &-section {
+        padding-bottom: 119px;
+    }
+    &-content {}
+    &-btn {
+        cursor: pointer;
+        padding: 0;
+        margin-right: 48px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &s {
+            border-bottom: 1px solid var(--Black);
+            padding-top: 28px;
+            padding-bottom: 11px;
+        }
+        &_active {
+            background: var(--Grad3);
+            @include gradient-text;
+        }
+    }
+    &-block {
+        display: none;
+        &s {
+            padding-top: 62px;
+        }
+        &_active {
+            display: block;
+        }
+    }
+}

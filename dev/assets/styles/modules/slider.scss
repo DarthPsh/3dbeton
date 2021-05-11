@@ -34,14 +34,34 @@
             height: 460px;
             margin-bottom: 40px;
             transition: .3s;
+            position: relative;
             @media (max-width: 1600px) {
                 height: 340px;
             }
             img {
                 height: 100%;
                 width: 100%;
-                object-fit: cover
-            };
+                object-fit: cover;
+            }
+            &-more {
+                position: absolute;
+                bottom: 31px;
+                right: 25px;
+                text-align: center;
+                height: 110px;
+                width: 110px;
+                color: var(--White);
+                border: 1px solid var(--White);
+                padding-top: 30px;
+                @include COND20;    
+                border-radius: 50%;
+                cursor: pointer;
+                &:hover {
+                    background: var(--Grad2);
+                    @include gradient-text;
+                    border-color: #ea7eb0;
+                }
+            }
         }
         &__content {
             max-width: 687px;

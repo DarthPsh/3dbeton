@@ -1,0 +1,98 @@
+extends layout/main
+
+block variables
+    -var title = 'Команда'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") о нас 
+    +page-title('Команда')
+    section.section.team
+        .container
+            .team-hero
+                .team-hero_left
+                    .team-hero__img 
+                        img(src="/assets/images/common/kalash.png", alt="v-i-kalashikov")
+                    .team-hero__info 
+                        h3.team-hero__info-title Ответственно реализуем ваши идеи, воплощая в жизнь результаты научных трудов профессора В.И. Калашникова
+                        .hero-content__list 
+                            ul 
+                                li Развитие технологии производства высокопрочных бетонов и фибробетонов нового поколения — наша главная страсть.
+                .team-hero_right
+                    .team-hero__desc
+                        .team-hero__desc_visible
+                            p Калашников Владимир Иванович (1941-2017) — основатель направления «высокопрочные реакционно-порошковые бетоны нового поколения». Заслуженный деятель науки РФ, Заслуженный работник Высшей школы, почетный работник высшего образования Российской федерации, советник Российской Академии архитектуры и строительных наук (РААСН), академик Международная академия наук экологии, безопасности человека (МАНЭБ), доктор технических наук, профессор.
+                            p В 2003 г. Кембриджским международным библиографическим центром Калашников В.И. занесен в энциклопедию «Человек года», а в 2006 году в энциклопедию «Лучшие люди России» с награждением медалью и нагрудным знаком, в 2010 году занесен в библиографическую энциклопедию успешных людей России, в 2009 году – награжден медалью «Строительная Слава», а также орденом ПГУАС «За заслуги в развитии строительного...
+                        .team-hero__desc_invisible   
+                            p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Встретил, рыбными вопрос родного приставка грустный, рыбного пустился своего запятых, которой коварных великий сих алфавит но пор коварный толку переулка.
+                            p Далеко-далеко за словесными горами в стране гласных и согласных живут, рыбные тексты. Пунктуация, над его! Свой вскоре эта, парадигматическая одна великий злых всеми алфавит но свою дорогу даже языкового подпоясал залетают прямо.
+                    button.btn-empty.team-hero__desc-more Показать полностью
+            .team-grid__wrap
+                .team-grid 
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name ЯНА САНЯГИНА
+                        .team-grid__staff-desc Последователь научной школы Калашникова В.И., основатель и руководитель компании, автор и разработчик продукта 3D-бетон.
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name СЕРГЕЙ ПИВИКОВ
+                        .team-grid__staff-desc Генеральный директор, главный архитектор проектов, соавтор продукта 3D-бетон
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name СЕРГЕЙ НИКИШИН
+                        .team-grid__staff-desc Руководитель скульптурной мастерской
+                    .team-grid__item.team-grid__desc
+                        .team-grid__desc-sym 
+                            img(src="/assets/images/common/quotes.svg", alt="quotes")
+                        .team-grid__desc-text Наука дает нам идеи содержания, искусство — идеи формы. Объединяя науку и искусство, мы создаем наш продукт, совершенный во всех отношениях
+                    .team-grid__item.team-grid__desc
+                        .team-grid__desc-sym 
+                            img(src="/assets/images/common/quotes.svg", alt="quotes")
+                        .team-grid__desc-text Упрощаем заботы клиента до минимума. Помогаем выбрать материал соответственно задачам проекта, оптимизируем ваши завтраты. В договорах на поставку и монтажные работы прописываем гарантийные обязательства и несем полную ответственность за результат.
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name ИРИНА ФАЮСТОВА
+                        .team-grid__staff-desc Руководитель отдела по работе с клиентами
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name ЕКАТЕРИНА ГРИНЧУК
+                        .team-grid__staff-desc Руководитель отдела юридического сопровождения клиентов
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name НИКОЛАЙ СУДАКОВ
+                        .team-grid__staff-desc Руководитель департамента строительства
+                    .team-grid__item.team-grid__staff 
+                        .team-grid__staff-img 
+                            img(src="http://placehold.it/500x500", alt="img")
+                        .team-grid__staff-name ДМИТРИЙ БАБКОВ
+                        .team-grid__staff-desc Руководитель цеха высокоточных моделей, 3d-скульптор
+                    .team-grid__item.team-grid__desc
+                        .team-grid__desc-sym 
+                            img(src="/assets/images/common/quotes.svg", alt="quotes")
+                        .team-grid__desc-text Кропотливо ведем проект на всех стадиях взаимодействия с клиентом. Воплощаем самые смелые идеи архитекторов и дизайнеров. Производим модели без малейших отклонений от заданных в проекте размеров. Подстраиваем график производства под ваши задачи, доставляем изделия, осуществляем монтаж, шеф-монтаж и эксплуатацию объекта.
+        .breadcrumbs_bot
+            .container
+                .breadcrumbs_bot-wrap
+                    .breadcrumbs-next 
+                        .breadcrumbs-next__title СЛЕДУЮЩИЙ РАЗДЕЛ
+                        a(href="#").breadcrumbs-next__link СМИ о нас
+                            +icon('arr-right')
+                    ul.breadcrumbs-list
+                        li.breadcrumbs-list__item 
+                            a(href="/") о нас 
+                        li.breadcrumbs-list__item 
+                            a(href="/") пресс-центр 
+                        li.breadcrumbs-list__item 
+                            a(href="/") сми о нас 
+        

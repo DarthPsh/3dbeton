@@ -32,7 +32,7 @@
             @include COND20;
             max-width: 359px;
             width: 100%;
-            margin-right: 42px;
+            margin-right: 64px;
             @media (max-width: 1600px) {
                 display: none;
             }
@@ -56,11 +56,55 @@
             max-width: 356px;
             margin-right: 66px;
             @include H3-dim;
+            &_big {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 128px;
+                line-height: 156px;
+                display: block;
+            }
         }
         &__desc {
             max-width: 774px;
+            &-title {
+                @include H4;
+                margin-bottom: 22px;
+            }
             p {
                 margin-bottom: 35px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding-left: 31px;
+                margin-bottom: 44px;
+                li {
+                    margin-bottom: 15px;
+                    position: relative;
+                    &:before {
+                        content: '';
+                        height: 9px;
+                        width: 9px;
+                        background: var(--White);
+                        position: absolute;
+                        display: block;
+                        left: -31px;
+                        border-radius: 50%;
+                        top: 8px;
+                        z-index: 100;
+                    }
+                    &:after {
+                        content: '';
+                        height: 11px;
+                        width: 11px;
+                        background: var(--Grad3);
+                        position: absolute;
+                        display: block;
+                        left: -32px;
+                        border-radius: 50%;
+                        top: 7px;
+                    }
+                }
             }
             &-btn {
                 &s {
@@ -73,6 +117,29 @@
             }
             &-order {
                 margin-right: 19px;
+            }
+        }
+        &_about {
+            .complet {
+                &-content {
+                    &__links {
+                        @media (max-width: 1600px) {
+                            display: block;
+                        }
+                    }
+                    &__title {
+                        @media (max-width: 1600px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .about-us-title {
+                display: none;
+                @include H3-dim;
+                @media (max-width: 1600px) {
+                    display: block;
+                }
             }
         }
     }

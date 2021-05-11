@@ -10,7 +10,7 @@ block content
                 li.breadcrumbs-list__item 
                     a(href="/") ГЛАВНАЯ 
                 li.breadcrumbs-list__item 
-                    a(href="/") продукция 
+                    a(href="/") портфолио 
     +page-title('Ротонда в ЖК «Алые Паруса»')
     section.section.hero-section
         .container
@@ -51,8 +51,105 @@ block content
                                     | Исполнение «под ключ» — создание визуализации по полученному эскизу, разработка и расчет конструктива, проектирование фундамента, изготовление элементов ротонды (несущий металлокаркас, колонны и архитрав из высокопрочного стеклофибробетона, кровля из стеклокомпозита имитирующего медь, декоративные элементы ковки), устройство фундаментов, монтаж элементов ротонды, финишная доводка с окрашиванием.
                             button.hero-content__desc-btn.btn-empty Показать полностью
                         .hero-content__bot 
-                            .hero-content__bot-form 
-                                input(type="tel" placeholder="Ваш телефон")
-                                button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
-                            a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
-                                +icon('arr-down') 
+                            .hero-content__bot-inner 
+                                button.btn-fill.calc-cost.hero-content__bot-calculate РАССЧИТАТЬ СТОИМОСТЬ
+                                a(href="#").btn-o.hero-content__bot-prod ЭТОТ ПРОДУКТ В КАТАЛОГЕ 
+    section.section.tabs-section
+        .container 
+            +section-title({name:'Другие работы в категории', link: '', href: ''})
+            .section-content.tabs-content
+                .tabs-btns 
+                    button.btn-empty.tabs-btn.tabs-btn_active Ротонды, колоннады, перголы (
+                        span.tabs-btn__count —
+                        | )
+                    button.btn-empty.tabs-btn Архитектурный декор общественных и жилых многоэтажных зданий (
+                        span.tabs-btn__count —
+                        | )
+                    button.btn-empty.tabs-btn 3D-металл (
+                        span.tabs-btn__count —
+                        | )
+                .tabs-blocks
+                    .tabs-block.tabs-block_active 
+                        .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                    .tabs-block
+                        .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                    .tabs-block 
+                        .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ДЕКОРАТИВНЫЕ ФАСАДНЫЕ ПАНЕЛИ «ВОЛНА» ДЛЯ ТЦ «КВАРТАЛ» ВО ФРЯЗИНО
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ
+                                    a(href="#").row-slider__item.swiper-slide
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .row-slider__item-title ФАСАД БИЗНЕС-ЦЕНТРА «ВК CAPITAL PALACE» В МОСКВЕ

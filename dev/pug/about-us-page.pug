@@ -1,0 +1,211 @@
+extends layout/main
+
+block variables
+    -var title = 'О нас'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") о нас 
+    +page-title('Группа компаний «3D-БЕТОН»')
+    section.section.complet-section
+        .container 
+            .complet-content.complet-content_b.complet-content_about
+                .complet-content__banner 
+                    img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                .complet-content__info
+                    .complet-content__links 
+                        ul 
+                            li
+                                a(href="#") ОПИСАНИЕ
+                            li
+                                a(href="#") ОСНОВНЫЕ ВИДЫ ПРОДУКЦИИ
+                            li
+                                a(href="#") СЕРТИФИКАТЫ
+                            li
+                                a(href="#") НАГРАДЫ И РЕКОМЕНДАЦИИ
+                    .complet-content__title Даем гарантию
+                        big.complet-content__title_big 30
+                        | лет, чтобы вам 
+                        br
+                        | не пришлось 
+                        br
+                        | сомневаться 
+                        br 
+                        | в выборе
+                    .complet-content__desc 
+                        h3.about-us-title Даем гарантию 30 лет лет, чтобы вам 
+                            br
+                            | не пришлось сомневаться в выборе
+                        p Группа компаний «3D-БЕТОН» занимается разработкой и производством объемных конструкций и элементов из декоративного фибробитона — 3D-бетона — от генерации идеи проекта до монтажа и обслуживания, «под ключ».
+                        p Собственные производственные участки изделий из высокопрочного фибробетона в Рязани и легкого стеклокомпозита в Пензе – являются производством полного цикла. Мы имеем отработанную технологию и подобранные составы фибробетона с высокими физико-техническими показателями, обеспечивающими высокую долговечность изделий
+                        h4.complet-content__desc-title Основные виды выпускаемой продукции
+                        ul
+                            li архитектурный декор из фибробетона, декоративные решетки и парапетные покрытия;
+                            li малые архитектурные формы, элементы ландшафтного дизайна;
+                            li облицовочные фасадные фибробетонные панели, фактурные 3D-панели;
+                            li арт-объекты: объемные фигуры, скульптуры, буквы;
+                            li элементы церковного убранства.
+    section.section.counter-section
+        .container 
+            .counter-content
+                .counter-list 
+                    .counter-list__item
+                        #counter-age.counter 0
+                        h4.counter-list__item-title лет научно
+                            br
+                            | -производственной 
+                            br
+                            | деятельности
+                    .counter-list__item
+                        #counter-company.counter 0
+                        h4.counter-list__item-title компаний в 
+                            br
+                            | составе группы
+                    .counter-list__item
+                        #counter-staff.counter 0
+                        h4.counter-list__item-title сотрудников суммарно 
+                            br
+                            | работают в группе 
+                            br
+                            | компаний
+                    .counter-list__item
+                        #counter-project.counter 0
+                        h4.counter-list__item-title выполненных проектов 
+                            br
+                            | с применением высокопрочных 
+                            br
+                            | бетонов и фибробетонов
+                .counter-desc 
+                    p Нашу продукцию отличает не только оптимальное сочетание цена/качество. Каждый заказ — это новое неповторимое изделие, работа над которым не может быть выполнена по шаблону или стандартному образцу. Именно поэтому наш творческий подход к каждому клиенту — не просто слова, а основа работ по исполнению индивидуальных заказов.
+    section.section.certificates-section
+        .container 
+            +section-title({name:'Сертификаты и награды', link: '', href: ''})
+            .certificates-content
+                .portfolio-list.certificates-list
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Сертификаты (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                    .portfolio-list__item
+                        .row-slider__wrap
+                            h3.row-slider__title Награды, рекомендации (
+                                span.row-slider__count
+                                |)
+                            .row-slider.swiper-slider 
+                                .row-slider__controls
+                                    .row-slider__controls-btn.row-slider__controls-next
+                                        +icon('arrow')
+                                    .row-slider__controls-btn.row-slider__controls-prev
+                                        +icon('arrow')
+                                .swiper-wrapper
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle СЕРТИФИКАТ СООТВЕТСТВИЯ
+                                            .row-slider__item-doc.row-slider__item-docdesc Соответствует требованиям нормативных документов
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    a(href="/assets/pdf/test.pdf" target="_blank").row-slider__item.swiper-slide
+                                        .row-slider__item-info 
+                                            .row-slider__item-doc.row-slider__item-doctype PDF
+                                            .row-slider__item-doc.row-slider__item-doctitle ПРОТОКОЛ СЕРТИФИКАЦИОННЫХ ИСПЫТАНИЙ
+                                            .row-slider__item-doc.row-slider__item-docdesc Испытания изделий стеклопластиковых декоративных фасадных и интерьерных
+                                        .row-slider__item-img
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+    .breadcrumbs_bot
+        .container
+            .breadcrumbs_bot-wrap
+                .breadcrumbs-next 
+                    .breadcrumbs-next__title СЛЕДУЮЩИЙ РАЗДЕЛ
+                    a(href="#").breadcrumbs-next__link 3D-бетон
+                        +icon('arr-right')
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item 
+                        a(href="/") о нас 
+                    li.breadcrumbs-list__item 
+                        a(href="/") материалы 
+                    li.breadcrumbs-list__item 
+                        a(href="/") 3D-БЕТОН 

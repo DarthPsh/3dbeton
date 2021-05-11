@@ -68,6 +68,7 @@ a {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .content { flex: 1 0 auto; }
@@ -196,6 +197,7 @@ h2 {
       @include COND20;
       color: var(--Gray);
       text-transform: uppercase;
+      white-space: nowrap;
       &:hover {
         background: var(--Grad3);
         @include gradient-text;
@@ -228,6 +230,35 @@ h2 {
 .breadcrumbs {
   padding-top: 70px;
   padding-bottom: 24px;
+  &-next {
+    &__title {
+      @include COND20;
+      color: var(--Gray);
+      margin-bottom: 16px;
+    }
+    &__link {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 80px;
+      line-height: 100%;
+      color: var(--Black);
+      &:hover {
+        background: var(--Grad2);
+        @include gradient-text;
+        .svg-sprite-icon {
+          fill: #ea7eb0;
+          stroke: #ea7eb0;
+        }
+      }
+      .svg-sprite-icon {
+        fill: var(--Black);
+        stroke: var(--Black);
+        height: 30px;
+        width: 45px;
+        margin-left: 30px;
+      }
+    }
+  }
   &-list {
     display: flex;
     &__item {
@@ -244,6 +275,15 @@ h2 {
           content: "/";
         }
       }
+    }
+  }
+  &_bot {
+    &-wrap {
+      padding-top: 69px;
+      padding-bottom: 83px;
+      border-top: 1px solid var(--Black);
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -290,6 +330,88 @@ h2 {
       &:hover {
         background: var(--Grad3);
         @include gradient-text;
+        .row-slider__item {
+          &-info {
+            background: transparent;
+            border-image-slice: 9;
+            border-width: 9px;
+            border-style: solid;
+            border-image-source: var(--Grad3);
+            outline: none;
+            &:before {
+              opacity: 0.36;
+            }
+            &:after {
+              opacity: 1;
+            }
+          }
+          &-doc {
+            display: none;
+          }
+        }
+      }
+      &-info {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 200;
+        background: var(--White);
+        padding: 19px 15px;
+        font-family: 'Proxima Nova Condensed';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 112.5%;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        border: 9px solid transparent;
+        outline: 1px solid var(--Black);
+        outline-offset: -1px;
+        transition: .3s;
+        background: var(--White);
+        &:before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          display: block;
+          background: var(--Grad3);
+          z-index: -1;
+          opacity: 0;
+          transition: .3;
+        }
+        &:after {
+          content: "";
+          background: url("/assets/images/common/plus.svg") center no-repeat;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          display: block;
+          position: absolute;
+          z-index: 100;
+          opacity: 0;
+          transition: .2s;
+        }
+      }
+      &-doc {
+        &type {
+          margin-bottom: 22px;
+          color: var(--Gray);
+        }
+        &title {}
+        &desc {
+          margin-top: auto;
+          text-transform: none;
+          @include Small-16;
+          max-width: 284px;
+        }
       }
       &-img {
         height: 290px;
@@ -334,6 +456,9 @@ h2 {
       @media (max-width: 1750px) {
         left: 1220px;
       }
+      @media (max-width: 1600px) {
+        left: 1159px;
+      }
       &-btn {
         padding-right: 5px;
         flex-grow: 1;
@@ -369,5 +494,34 @@ h2 {
   &-content {
     padding-top: 75px;
     padding-bottom: 102px;
+  }
+}
+
+
+.links {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 18px;
+    padding-bottom: 36px;
+    &__item {
+      &-link {
+        display: block;
+        padding: 9px 20px 7px;
+        background: var(--Black);
+        margin-right: 12px;
+        margin-bottom: 14px;
+        color: var(--White);
+        @include COND16;
+      }
+      .is-active {
+        background: var(--BtnRect);
+      }
+      &:last-child {
+        a {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }

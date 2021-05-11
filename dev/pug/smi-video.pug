@@ -1,0 +1,44 @@
+extends layout/main
+
+block variables
+    -var title = 'Пресс-центр Видео'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+                li.breadcrumbs-list__item 
+                    a(href="/") о нас 
+    +page-title('Пресс-центр')
+    section.section.links
+        .container
+            .links-content 
+                ul.links-list 
+                    li.links-list__item
+                        a.links-list__item-link(href="#") СМИ О НАС (8)
+                    li.links-list__item
+                        a.is-active.links-list__item-link(href="#") ВИДЕО (2)
+                    li.links-list__item
+                        a.links-list__item-link(href="#") НАУЧНЫЕ СТАТЬИ (13)
+    section.section.smi
+        .container 
+            .smi-content
+                .smi-grid 
+                    a(href="#" target="_blank").smi-grid__video.smi-grid__item
+                        .smi-grid__video-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .smi-grid__video-title Интервью для телепроекта «рубль» на канале «Экспресс»
+                    a(href="#" target="_blank").smi-grid__video.smi-grid__item
+                        .smi-grid__video-img 
+                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .smi-grid__video-title Интервью для телепроекта «НЕСТАНДАРТ» на канале «Экспресс»
+    section.section.smi-more 
+        .container 
+            .smi-more__content 
+                .smi-more__quotes
+                    img(src="/assets/images/common/quotes.svg", alt="quotes")
+                .smi-more__desc Мы привыкли представлять свои разработки научному совету. А на форуме «Селигер» мы показали их бизнесменам и инвесторам. Эти люди не выдают дипломов (которые часто используются лишь для украшения стен), они задают вопросы. Какой продукт получится из наших разработок и что мы будем делать с ним дальше? В то время мы не знали ответов на эти вопросы, но поняли, что нужно сосредоточиться на разработке реального продукта, а не написания диссертаций.
+                a.smi-more__link(href="#") СМОТРЕТЬ ИНТЕРВЬЮ ПОЛНОСТЬЮ В ТЕЛЕПРОЕКТЕ “РУБЛЬ” 
+                    

@@ -1,0 +1,20 @@
+.certificates {
+    &-section {}
+    &-content {
+        padding-top: 80px;
+        padding-bottom: 120px;
+    }
+    &-list {
+        .row {
+            &-slider {
+                &__item {
+                    height: 480px;
+                    &-img {
+                        margin-bottom: 0;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@ var heroSlider = new Swiper('.hero-slider', {
     },
 });
 
-$('.hero-content__desc-btn').on('click', function() {
+$('.hero-content__desc-btn').on('click', function () {
     $(this).prev('.hero-content__desc-block').toggleClass('is-show');
 })
 
@@ -102,14 +102,24 @@ $('.row-slider__wrap').each(function () {
     $(this).find('.row-slider__count').text(rowSliderCount);
 });
 
-var rowSlider = new Swiper('.row-slider', {
-    slidesPerView: 'auto',
-    spaceBetween: 64,
-    navigation: {
-        nextEl: '.row-slider__controls-next',
-        prevEl: '.row-slider__controls-prev',
-    },
-});
+function initRowSlider() {
+    var rowSlider = new Swiper('.row-slider', {
+        slidesPerView: 'auto',
+        spaceBetween: 40,
+        navigation: {
+            nextEl: '.row-slider__controls-next',
+            prevEl: '.row-slider__controls-prev',
+        },
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            1600: {
+                spaceBetween: 64,
+            },
+        },
+    });
+}
+initRowSlider();
 
 
 
@@ -161,6 +171,124 @@ var simpleSlider = new Swiper('.simple-slider', {
 });
 
 
-// $('#menu_bottom').height();
-let montageGridItemInfo = document.querySelectorAll('.montage-grid__item-info');
-montageGridItemInfo[3].style.minHeight = montageGridItemInfo[2].clientHeight + 'px';
+if (document.querySelectorAll('.montage-grid__item-info').length) {
+    let montageGridItemInfo = document.querySelectorAll('.montage-grid__item-info');
+    montageGridItemInfo[3].style.minHeight = montageGridItemInfo[2].clientHeight + 'px';
+}
+
+
+if (document.querySelectorAll('.tabs-btn').length) {
+    const tabBtn = document.querySelectorAll('.tabs-btn');
+    const tabBtnCount = document.querySelectorAll('.tabs-btn__count');
+    const tabBlock = document.querySelectorAll('.tabs-block');
+    let tabBlockItemCount
+    tabBtn.forEach(function (item, index) {
+        item.addEventListener('click', () => {
+            tabBtn.forEach(el => {
+                el.classList.remove('tabs-btn_active');
+            });
+            tabBlock.forEach(el => {
+                el.classList.remove('tabs-block_active');
+            });
+            item.classList.add('tabs-btn_active');
+            tabBlock[index].classList.add('tabs-block_active');
+            initRowSlider();
+        });
+    })
+    tabBlock.forEach(function (item, index) {
+        tabBlockItemCount = item.querySelectorAll('.row-slider__item');
+        tabBtnCount[index].innerText = tabBlockItemCount.length;
+    });
+}
+
+
+
+
+
+if (document.querySelectorAll(".counter-list").length) {
+    var show = true;
+    var countbox = ".counter-list";
+    $(window).on("scroll load resize", function () {
+        if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+        var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+        var w_height = $(window).height(); // Высота окна браузера
+        var d_height = $(document).height(); // Высота всего документа
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+        if (w_top + 800 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+            //
+            // скрипт который должен выполниться
+            $('.counter').css('opacity', '1');
+            var counterAge = $('#counter-age').text();
+            $({ ageNumberValue: counterAge }).animate({ ageNumberValue: 13 }, {
+                duration: 3000,
+                easing: 'linear',
+                step: function () {
+                    $('#counter-age').text(Math.ceil(this.ageNumberValue));
+                }
+            });
+            var counterCompany = $('#counter-company').text();
+            $({ companyNumberValue: counterCompany }).animate({ companyNumberValue: 4 }, {
+                duration: 3000,
+                easing: 'linear',
+                step: function () {
+                    $('#counter-company').text(Math.ceil(this.companyNumberValue));
+                }
+            });
+            var counterStaff = $('#counter-staff').text();
+            $({ staffNumberValue: counterStaff }).animate({ staffNumberValue: 40 }, {
+                duration: 3000,
+                easing: 'linear',
+                step: function () {
+                    $('#counter-staff').text(Math.ceil(this.staffNumberValue));
+                }
+            });
+            var counterProject = $('#counter-project').text();
+            $({ projectNumberValue: counterProject }).animate({ projectNumberValue: 150 }, {
+                duration: 3000,
+                easing: 'linear',
+                step: function () {
+                    $('#counter-project').text(Math.ceil(this.projectNumberValue));
+                }
+            });
+    
+            show = false;
+        }
+    });
+}
+
+$('.team-hero__desc-more').on('click', function() {
+    $('.team-hero__desc_invisible').toggleClass('is-visible');
+})
+
+
+
+var technoSliderThumbs = new Swiper('.techno-slider__thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+var technoSliderMain = new Swiper('.techno-slider__main', {
+    spaceBetween: 19,
+    slidesPerView: 1,
+    thumbs: {
+        swiper: technoSliderThumbs,
+        autoScrollOffset: 1,
+    },
+    navigation: {
+        nextEl: '.hero-slider__next',
+        prevEl: '.hero-slider__prev',
+    },
+    pagination: {
+        el: '.hero-slider__pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass, index, total) {
+            return '<span class="' + currentClass + '">' + index + '</span>' +
+                '<span class="slider-control__pagination-separator"></span>' +
+                '<span class="' + totalClass + '">' + total + '</span>';
+        },
+    }
+    
+});

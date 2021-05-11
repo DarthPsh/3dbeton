@@ -1,0 +1,275 @@
+extends layout/main
+
+block variables
+    -var title = 'Технологии'
+
+block content
+    .breadcrumbs
+        .container
+            ul.breadcrumbs-list
+                li.breadcrumbs-list__item 
+                    a(href="/") ГЛАВНАЯ 
+    +page-title('Технологии')
+    section.section.links
+        .container
+            .links-content 
+                ul.links-list 
+                    li.links-list__item
+                        a.is-active.links-list__item-link(href="#") 3D-бетон
+                    li.links-list__item
+                        a.links-list__item-link(href="#") СТЕКЛОФИБРОБЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") АРХИТЕКТУРНЫЙ БЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") ВЫСОКОПРОЧНЫЙ БЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") СТАЛЕФИБРОБЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") DUCTAL
+                    li.links-list__item
+                        a.links-list__item-link(href="#") БЫСТРОТВЕРДЕЮЩИЙ БЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") ПРОЗРАЧНЫЙ БЕТОН
+                    li.links-list__item
+                        a.links-list__item-link(href="#") 3D-ГРАНИТ
+                    li.links-list__item
+                        a.links-list__item-link(href="#") ФИБРОГИПС
+                    li.links-list__item
+                        a.links-list__item-link(href="#") УМНЫЙ ГИПС
+                    li.links-list__item
+                        a.links-list__item-link(href="#") МЕТАЛЛИЗАЦИЯ
+                    li.links-list__item
+                        a.links-list__item-link(href="#") СТЕКЛОКОМПОЗИТ
+                    li.links-list__item
+                        a.links-list__item-link(href="#") ИМИТАЦИЯ ЛЬДА
+                    li.links-list__item
+                        a.links-list__item-link(href="#") СВЕТОПРОЗРАЧНАЯ СМОЛА
+                    li.links-list__item
+                        a.links-list__item-link(href="#") RECKLE
+    section.section.techno-row__slider
+        .container
+            .techno-row__slider-content 
+                .row-slider.swiper-slider 
+                    .row-slider__controls
+                        .row-slider__controls-btn.row-slider__controls-next
+                            +icon('arrow')
+                        .row-slider__controls-btn.row-slider__controls-prev
+                            +icon('arrow')
+                    .swiper-wrapper
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                        .row-slider__item.swiper-slide
+                            .row-slider__item-img
+                                img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+    section.section.techno
+            .container
+                .complet-content__info
+                    .complet-content__links 
+                        ul 
+                            li
+                                a(href="#") ОПИСАНИЕ 
+                            li
+                                a(href="#") ХАРАКТЕРИСТИКИ
+                            li
+                                a(href="#") ПРОЕКТЫ 
+                    .complet-content__title 
+                        h3 3D бетон — инновационный, многогранный материал с огромным потенциалом
+                        .hero-content__list 
+                            ul 
+                                li результаты лучших лабораторных исследований
+                                li многолетний опыт работы с высокопрочными бетонами
+                                li расширенные производственные возможности
+                                li любовь к эстетике архитектуры и свои самые смелые амбиции
+                    .complet-content__desc 
+                        h4.complet-content__desc-title 3D бетон —  материал с неограниченными возможностями
+                        p Материал с неограниченными возможностями, изделия из него могут быть любой самой сложной формы, иметь любые размеры – от габаритных конструкций в несколько этажей до тонких визиток из бетона, любую массу – от тонкостенных легких элементов декора до полнотелых и тяжелых элементов благоустройства, быть абсолютно любого цвета и иметь огромное множество вариантов текстур – от глянцевого фарфора до матовой шагрени, имитировать природный камень – песчаник, травертин, гранит, быть изящным мозаичным стеклобетоном или иметь брутальную поверхность тяжелого бетона или даже может быть прозрачным
+                        .techno-sliders
+                            .techno-slider__main.swiper-container 
+                                .swiper-wrapper
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                    .swiper-slide.techno-slider__main-item
+                                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                            .techno-slider__thumbs-wrap
+                                .techno-slider__thumbs.swiper-container 
+                                    .swiper-wrapper
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                        .swiper-slide.techno-slider__thumbs-item
+                                            img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
+                                .slider-controls
+                                    .slider-control
+                                        .slider-control__prev.slider-control__item.swiper-button-prev.hero-slider__prev
+                                            +icon('arr-left')
+                                        .slider-control__next.slider-control__item.swiper-button-next.hero-slider__next
+                                            +icon('arr-right')
+                                    .slider-control__pagination.swiper-pagination.hero-slider__pagination
+                        h4.complet-content__desc-title 3D-бетон —  это больше чем стеклофибробетон
+                        p Он может быть армирован стекловолокном, оптоволокном, металлической, базальтовой либо другой микрофиброй, изготавливаться на основе различных, в том числе бесцементных вяжущих веществ.
+                        .techno-table__wrap
+                            table.techno-table
+                                thead 
+                                    tr 
+                                        th 
+                                        th 3D-бетон
+                                        th Стеклофибробетон (средние показатели по рынку России)
+                                tbody
+                                    tr
+                                        th Прочность на осевое сжатие, МПа
+                                        td 80-120
+                                        td 30-50
+                                    tr
+                                        th Прочность на растяжение, МПа
+                                        td 10-12
+                                        td 6-8
+                                    tr
+                                        th Морозостойкость, циклы
+                                        td от 500
+                                        td 200-300
+                                    tr
+                                        th Гарантия, лет
+                                        td 30
+                                        td 1-10
+    section.section.techno-info
+        .container
+            .techno-info__content
+                ul
+                    li Снижаем общую проектную массу материала (сокращая массу подсистемы до 5 раз по сравнению со стандартными решениями) без потери прочности конструкции; 
+                    li оптимизируем смету;
+                    li значительно увеличиваем срок службы объекта;
+                    li применяем инженерно-технические решения, которые разрабатывались в течение десятилетий в сотрудничестве с профессором В. И. Калашниковым в ПГАСА
+                .techno-info__btns
+                    button.techno-info__btn-order.techno-info__btn.btn-fill СДЕЛАТЬ ЗАКАЗ
+                    button.techno-info__btn-consult.techno-info__btn.btn-o ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+    section.section.pageslider-section
+        .container 
+            +section-title({name:'Проекты, выполненные с применением 3D-бетона', link: 'ВСЕ ПРОЕКТЫ', href: '#'})
+            .section-content.pageslider-content
+                .pageslider.swiper-container 
+                    .swiper-wrapper
+                        .pageslider-item.swiper-slide
+                            .pageslider-item__side.pageslider-item__main 
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
+                                .pageslider-item__content
+                                    h3.pageslider-item__title Фасадный декор здания усадьбы  Соколовых-Сибиряковых (XIX в.)
+                                    .pageslider-item__geo Москва, Вознесенский пер., 11
+                                    .pageslider-item__tags 
+                                        .pageslider-item__tag Архитектурный декор
+                                        .pageslider-item__tag 3D-ГРАНИТ
+                                        .pageslider-item__tag СКУЛЬПТУРЫ
+                            .pageslider-item__side.pageslider-item__second
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
+                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                        | Еще 
+                                        span.count 3 
+                                        br
+                                        | фото
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                .pageslider-item__content
+                                    .pageslider-item__desc По предоставленному заказчиком проекту изготовлены элементы архитектурного декора из высокопрочного стеклофибробетона, разработан проект производства работ и произведен шеф-монтаж на объекте.
+                        .pageslider-item.swiper-slide
+                            .pageslider-item__side.pageslider-item__main 
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
+                                .pageslider-item__content
+                                    h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
+                                    .pageslider-item__geo с. Наровчат
+                                    .pageslider-item__tags 
+                                        .pageslider-item__tag Архитектурный декор
+                                        .pageslider-item__tag 3D-ГРАНИТ
+                                        .pageslider-item__tag СКУЛЬПТУРЫ
+                            .pageslider-item__side.pageslider-item__second
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
+                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                        | Еще 
+                                        span.count 3 
+                                        br
+                                        | фото
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                .pageslider-item__content
+                                    .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
+                        .pageslider-item.swiper-slide
+                            .pageslider-item__side.pageslider-item__main 
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
+                                .pageslider-item__content
+                                    h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
+                                    .pageslider-item__geo с. Наровчат
+                                    .pageslider-item__tags 
+                                        .pageslider-item__tag Архитектурный декор
+                                        .pageslider-item__tag 3D-ГРАНИТ
+                                        .pageslider-item__tag СКУЛЬПТУРЫ
+                            .pageslider-item__side.pageslider-item__second
+                                .pageslider-item__img 
+                                    img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
+                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                        | Еще 
+                                        span.count 3 
+                                        br
+                                        | фото
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                .pageslider-item__content
+                                    .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
+                .slider-controls.pageslider-controls
+                    .slider-control
+                        .slider-control__prev.slider-control__item.swiper-button-prev.pageslider-prev
+                            +icon('arr-left')
+                        .slider-control__next.slider-control__item.swiper-button-next.pageslider-next
+                            +icon('arr-right')
+                    .slider-control__pagination.swiper-pagination.pageslider-pagination
+    .breadcrumbs_bot
+        .container
+            .breadcrumbs_bot-wrap
+                .breadcrumbs-next 
+                    .breadcrumbs-next__title СЛЕДУЮЩИЙ РАЗДЕЛ
+                    a(href="#").breadcrumbs-next__link Стеклокомпозит
+                        +icon('arr-right')
+                ul.breadcrumbs-list
+                    li.breadcrumbs-list__item 
+                        a(href="/") о нас 
+                    li.breadcrumbs-list__item 
+                        a(href="/") материалы 
+                    li.breadcrumbs-list__item 
+                        a(href="/") Стеклокомпозит 

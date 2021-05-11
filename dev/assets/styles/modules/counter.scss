@@ -1,0 +1,91 @@
+.counter {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 128px;
+    line-height: 156px;
+    opacity: 0;
+    transition: 1s;
+    position: relative;
+    @media (max-width: 1600px) {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 104px;
+        line-height: 127px;
+    }
+    &-section {}
+    &-content {
+        padding-top: 46px;
+        padding-bottom: 154px;
+        border-top: 1px solid var(--Black);
+    }
+    &-list {
+        display: flex;
+        // padding-right: 150px;
+        max-width: 1628px;
+        padding-bottom: 150px;
+        @media (max-width: 1600px) {
+            // padding-right: 100px;
+            max-width: 1250px;
+        }
+        &__item {
+            flex-basis: 25%;
+            &-title {
+                @include H4;
+                text-transform: lowercase;
+            }
+        }
+    }
+    &-desc {
+        border-top: 1px solid var(--Black);
+        padding-top: 57px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 40px;
+        line-height: 134.8%;
+        @media (max-width: 1600px) {
+            font-size: 32px;
+            line-height: 150%;
+        }
+        p {
+            max-width: 1628px;
+            @media (max-width: 1600px) {
+                max-width: 1154px;
+            }
+        }
+    }
+}
+
+#counter {
+    &-staff {
+        width: 150px;
+        text-align: right;
+        @media (max-width: 1600px) {
+            width: 121px;
+        }
+        &:after {
+            content: '+';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            top: 0;
+            right: -65px;
+        }
+    }
+    &-project {
+        width: 198px;
+        text-align: right;
+        @media (max-width: 1600px) {
+            width: 160px;
+        }
+        &:after {
+            content: '+';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            top: 0;
+            right: -65px;
+        }
+    }
+}
