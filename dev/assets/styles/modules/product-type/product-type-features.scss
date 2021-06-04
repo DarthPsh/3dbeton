@@ -3,6 +3,9 @@
         @media (max-width: 1600px) {
             padding-right: 130px;
         }
+        @media (max-width: 1000px) {
+            padding-right: 0;
+        }
     }
     &-content {
         display: grid;
@@ -15,8 +18,24 @@
         @media (max-width: 1600px) {
             column-gap: 40px;
         }
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
         &__block {
             padding-right: 44px;
+            position: relative;
+            @media (max-width: 768px) {
+                padding-right: 0;
+            }
+            .svg-sprite-icon {
+                display: none;
+                position: absolute;
+                @media (max-width: 768px) {
+                    display: block;
+                    right: 2px;
+                    top: 15px;
+                }
+            }
             &-inner {
                 max-width: 733px;
             }
@@ -24,6 +43,13 @@
                 height: 112px;
                 width: 112px;
                 margin-bottom: 24px;
+                @media (max-width: 768px)  {
+                    height: 48px;
+                    width: 48px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
                 img {
                     max-height: 100%;
                     max-width: 100%;
@@ -32,6 +58,27 @@
             &-title {
                 margin-bottom: 20px;
                 @include H3;
+                @media (max-width: 768px) {
+                    padding-left: 58px;
+                    padding-right: 16px;
+                    min-height: 48px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &-desc {
+                @media (max-width: 768px) {
+                    height: 0;
+                    opacity: 0;
+                    transition: .3s;
+                }
+                &_active {
+                    @media (max-width: 768px) {
+                        height: auto;
+                        opacity: 1;
+                    }
+                }
             }
         }
     }

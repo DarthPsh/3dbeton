@@ -14,6 +14,14 @@ block content
     +page-title('Формы, оснастка, матрицы')
     section.section.hero-section
         .container
+            .hero-mobslider.swiper-container 
+                .swiper-wrapper
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
             .hero-content 
                 .hero-content_left 
                     .hero-content__img 
@@ -44,7 +52,7 @@ block content
                                 li Доставка
                         .hero-content__title Оставьте заявку на расчет стоимости моделей, форм, матриц для производства необходимых вам изделий
                         .hero-content__bot 
-                            .hero-content__bot-form 
+                            form.hero-content__bot-form 
                                 input(type="tel" placeholder="Ваш телефон")
                                 button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
                             a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
@@ -55,6 +63,9 @@ block content
                 .complet-content__info
                     .complet-content__links 
                         ul 
+                            li.complet-content__links-title
+                                | На этой странице
+                                +icon('shevron')
                             li
                                 a(href="#") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
                             li
@@ -64,6 +75,7 @@ block content
                     .complet-content__title Производим модели, формы, матрицы и оснастки для изделий из фибробетона, ЦСП, фиброцементных плит
                     .complet-content__desc 
                         p Производим всю необходимую оснастку – модели, формы, матрицы для изготовления изделий из бетона и фибробетона, фиброцементных панелей, цементно-стружечных плит, 3d-панелей, архитектурных элементов (карнизов, колонн, пилястр, балюстрад, молдингов, розеток, барельефов), скульптур, малых архитектурных форм (вазонов, скамей, урн, ограничителей парковки) и многого другого под заказ из стеклопластика, силикона, полиуретана, тонкого пластика ПВХ, а также дерева, фанеры и металла.
+                    button.btn-empty.complet-content__desc-more Показать полностью
     section.section.fabricate-section
         .container 
             +section-title({name:'Изготовим для вас', link: '', href: ''})
@@ -176,30 +188,35 @@ block content
             .section-content.features-content
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/f-cube.png", alt="img")
                         h3.features-content__block-title Любые размеры, цвета и фактуры
                         p.features-content__block-desc Мы производим оснастку как для небольших изделий – например визиток и сувениров из бетона, так и для изделий огромных габаритных размеров – к примеру целиковые формы колонн длиной 18 метров! подберем абсолютно любую заданную текстуру.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/heart.png", alt="img")
                         h3.features-content__block-title Делаем, как для себя
                         p.features-content__block-desc Мы производим малые архитектурные формы нового поколения и знаем не понаслышке о необходимом качестве оснастки – четкой геометрии форм, необходимой оборачиваемости и отсутствии залипов.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/recycle.png", alt="img")
                         h3.features-content__block-title Высокая оборачиваемость
                         p.features-content__block-desc Мы производим архитектурные формы из бетона по проверенным и отработанным технологиям и можем гарантировать максимально высокую оборачиваемость матриц при правильном и бережном к ним отношении.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/precise.png", alt="img")
                         h3.features-content__block-title Высокая точность
                         p.features-content__block-desc достигается нами за счет применения технологий 3d-фрезерования с помощью ЧПУ вместо широко применяемого ручного формования. Мы создаем сложные архитектурные элементы без отклонений от заданных параметров
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/calc.png", alt="img")
                         h3.features-content__block-title Подберем под ваш бюджет

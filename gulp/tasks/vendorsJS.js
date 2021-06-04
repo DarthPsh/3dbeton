@@ -7,6 +7,8 @@ const vendorsScripts = [
   'node_modules/lozad/dist/lozad.min.js',
   'node_modules/swiper/swiper-bundle.min.js',
   'node_modules/lightbox2/dist/js/lightbox.min.js',
+  'node_modules/jquery-validation/dist/jquery.validate.min.js',
+  'dev/assets/js/vendor/jquery.viewportchecker.js',
 ];
 
 module.exports = function vendors(cb) {

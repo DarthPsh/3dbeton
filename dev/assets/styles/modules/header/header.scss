@@ -1,6 +1,9 @@
 header { flex: 0 0 auto; }
 
 .header {
+    @media (max-width: 1000px) {
+        box-shadow: 0px 2px 21px 1px rgba(0, 0, 0, 0.09);
+    }
     &-wrap {
         padding-top: 32px;
         padding-bottom: 27px;
@@ -8,6 +11,9 @@ header { flex: 0 0 auto; }
         @media (max-width: 1600px) {
             padding-top: 34px;
             padding-bottom: 24px;
+        }
+        @media (max-width: 1000px) {
+            justify-content: space-between;
         }
     }
     &-logo {
@@ -28,6 +34,9 @@ header { flex: 0 0 auto; }
         padding-top: 7px;
         @media (max-width: 1600px) {
             padding: 0;
+        }
+        @media (max-width: 1000px) {
+            display: none !important;
         }
     }
     &-menu {
@@ -265,6 +274,220 @@ header { flex: 0 0 auto; }
             margin-left: 40px;
             white-space: normal;
             @include COND16;
+        }
+    }
+}
+
+
+.burger {
+    display: none;
+    @media (max-width: 1000px) {
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        width: 32px;
+        height: 18px;
+        background: var(--White);
+        display: block;
+        position: relative;
+        &-line {
+            height: 2px;
+            width: 100%;
+            background: var(--Black);
+            position: absolute;
+            left: 0;
+            transition: .3s;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                bottom: 0;
+            }
+        }
+    }
+    &_active {
+        .burger {
+            &-line {
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-1px) rotate(135deg);
+                }
+                &:nth-child(2) {
+                    transform: translateX(50px);
+                }
+                &:nth-child(3) {
+                    bottom: 50%;
+                    transform: translateY(1px) rotate(-135deg);
+                }
+            }
+        }
+    }
+}
+
+
+.mob {
+    &-menu {
+        position: fixed;
+        top: 96px;
+        bottom: 0;
+        left: -100%;
+        height: calc(100vh - 96px);
+        width: 100%;
+        z-index: 500;
+        transition: .3s;
+        overflow: auto;
+        background: var(--White);
+        text-transform: uppercase;
+        visibility: hidden;
+        opacity: 0;
+        @include COND20;
+        a {
+            &:hover {
+                background: var(--Grad3);
+                @include gradient-text;
+            }
+        }
+        &__content {
+            padding: 94px 8px 0px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            min-height: 450px;
+        }
+        &__list {
+            padding-left: 105px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .svg-sprite-icon {
+                height: 10px;
+                width: 6px;
+                fill: var(--Gray);
+                margin-left: 16px;
+                transform: translateY(-3px);
+            }
+            li {
+                margin-bottom: 32px;
+            }
+            a {
+                color: var(--Black);
+                text-decoration: none;
+                transition: .3s;
+            }
+        }
+        &__bot {
+            display: flex;
+            justify-content: space-between;
+            line-height: 24px;
+            padding: 17px 0 22px;
+            border-top: 1px solid var(--Black);
+            a {
+                color: var(--Black);
+                text-decoration: none;
+                transition: .3s;
+                margin-right: 22px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                
+            }
+            &-info {
+                @include Tiny;
+                color: var(--Gray);
+            }
+            &-social {
+                text-transform: uppercase;
+                @include COND16;
+            }
+        }
+        &_active {
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &-submenu {
+        position: fixed;
+        top: 96px;
+        bottom: 0;
+        left: 100%;
+        height: calc(100vh - 96px);
+        width: 0;
+        z-index: 500;
+        transition: .3s;
+        overflow: auto;
+        background: var(--White);
+        text-transform: uppercase;
+        overflow-x: hidden;
+        visibility: hidden;
+        opacity: 0;
+        @include COND20;
+        a {
+            &:hover {
+                background: var(--Grad3);
+                @include gradient-text;
+            }
+        }
+        &__title {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            padding-left: 105px;
+            width: 100%;
+            padding-bottom: 8px;
+            cursor: pointer;
+            font-size: 36px;
+            line-height: 100%;
+            .svg-sprite-icon {
+                transform: rotate(180deg);
+                height: 14px;
+                width: 10px;
+                fill: var(--Black);
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                margin: 0;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                display: block;
+                height: 1px;
+                width: 100%;
+                background: var(--Black);
+                bottom: 0;
+                left: 105px;
+            }
+        }
+        &__content {
+            padding: 94px 8px 0px 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            min-height: 450px;
+        }
+        &__list {
+            padding-left: 105px;
+            li {
+                margin-bottom: 32px;
+            }
+            a {
+                color: var(--Black);
+                text-decoration: none;
+                transition: .3s;
+            }
+        }
+        &_active {
+            left: 0;
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
         }
     }
 }

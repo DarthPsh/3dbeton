@@ -6,14 +6,29 @@
         padding-top: 63px;
         padding-bottom: 95px;
         // padding-right: 194px;
+        @media (max-width: 1000px) {
+            padding-right: 30px;
+            padding-top: 24px;
+            padding-bottom: 57px;
+        }
     }
     &-slider {
         position: relative;
         // max-width: 1622px;
+        width: 779px;
+        @media (max-width: 1600px) {
+            width: 557px;
+        }
+        @media (max-width: 768px) {
+            width: 276px;
+        }
         &__item {
             width: 779px;
             @media (max-width: 1600px) {
                 width: 557px;
+            }
+            @media (max-width: 768px) {
+                width: 276px;
             }
             &-img {
                 height: 467px;
@@ -22,6 +37,10 @@
                 margin-bottom: 24px;
                 @media (max-width: 1600px) {
                     height: 320px;
+                }
+                @media (max-width: 768px) {
+                    height: 192px;
+                    margin-bottom: 16px;
                 }
                 img {
                     position: absolute;
@@ -36,6 +55,9 @@
             &-title {
                 margin-bottom: 15px;
                 @include H3;
+                @media (max-width: 768px) {
+                    margin-bottom: 8px;
+                }
             }
         }
         .swiper-slide {

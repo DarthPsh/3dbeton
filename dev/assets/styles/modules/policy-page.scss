@@ -4,6 +4,10 @@
         display: flex;
         padding-top: 90px;
         padding-bottom: 130px;
+        @media (max-width: 1000px) {
+            padding-top: 47px;
+            padding-bottom: 85px;
+        }
         &__links {
             @include COND20;
             max-width: 359px;
@@ -34,6 +38,10 @@
             &s {}
             display: flex;
             margin-bottom: 55px;
+            @media (max-width: 1000px) {
+                flex-direction: column;
+                margin-bottom: 32px;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -45,11 +53,18 @@
                 @media (max-width: 1600px) {
                     margin-right: 40px;
                 }
+                @media (max-width: 1000px) {
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
             }
             &-desc {
                 max-width: 778px;
                 p {
                     margin-bottom: 50px;
+                    @media (max-width: 1000px) {
+                        margin-bottom: 30px;
+                    }
                     &:last-child {
                         margin-bottom: 0;
                     }

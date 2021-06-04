@@ -1,4 +1,90 @@
 header.header
+    .mob-menu
+        .mob-menu__content
+            ul.mob-menu__list
+                li
+                    a(href="/product-page.html") ПРОДУКЦИЯ
+                li
+                    a(href="/portfolio-page.html") ПОРТФОЛИО
+                li
+                    a(href="#") ТЕХНОЛОГИИ
+                        +icon('shevron_r')
+                    .mob-submenu
+                        .mob-submenu__content
+                            h2.mob-submenu__title 
+                                +icon('shevron_r')
+                                | Технологии
+                            ul.mob-submenu__list
+                                li
+                                    a(href="#") КОМПАНИЯ
+                                li
+                                    a(href="#") КОМАНДА
+                                li
+                                    a(href="#") СЕРТИФИКАТЫ
+                                li
+                                    a(href="#") НАГРАДЫ
+                                li
+                                    a(href="#") СМИ О НАС
+                                li
+                                    a(href="#") ВИДЕО
+                                li
+                                    a(href="#") НАУЧНЫЕ СТАТЬИ
+                li
+                    a(href="#") УСЛУГИ
+                        +icon('shevron_r')
+                    .mob-submenu
+                        .mob-submenu__content
+                            h2.mob-submenu__title 
+                                +icon('shevron_r')
+                                | Услуги
+                            ul.mob-submenu__list
+                                li
+                                    a(href="#") КОМПАНИЯ
+                                li
+                                    a(href="#") КОМАНДА
+                                li
+                                    a(href="#") СЕРТИФИКАТЫ
+                                li
+                                    a(href="#") НАГРАДЫ
+                                li
+                                    a(href="#") СМИ О НАС
+                                li
+                                    a(href="#") ВИДЕО
+                                li
+                                    a(href="#") НАУЧНЫЕ СТАТЬИ
+                li
+                    a(href="#") О НАС
+                        +icon('shevron_r')
+                    .mob-submenu
+                        .mob-submenu__content
+                            h2.mob-submenu__title 
+                                +icon('shevron_r')
+                                | О нас
+                            ul.mob-submenu__list
+                                li
+                                    a(href="#") КОМПАНИЯ
+                                li
+                                    a(href="#") КОМАНДА
+                                li
+                                    a(href="#") СЕРТИФИКАТЫ
+                                li
+                                    a(href="#") НАГРАДЫ
+                                li
+                                    a(href="#") СМИ О НАС
+                                li
+                                    a(href="#") ВИДЕО
+                                li
+                                    a(href="#") НАУЧНЫЕ СТАТЬИ
+                li
+                    a(href="#") КОНТАКТЫ
+            .mob-menu__bot 
+                .mob-menu__bot-info
+                    p © 2021 «3D-бетон»
+                .mob-menu__bot-social
+                    a(href="#") ВК
+                    a(href="#") ФБ
+                    a(href="#") ИНСТ
+                    a(href="#") ТГ
     .container 
         .header-wrap 
             a(href="/").header-logo.logo
@@ -6,7 +92,7 @@ header.header
             nav.header-menu.header-item
                 ul 
                     li
-                        a(href="#") ПРОДУКЦИЯ
+                        a(href="/product-page.html") ПРОДУКЦИЯ
                     ul.header-menu__dropdown.header-menu__dropdown-production
                         li.container 
                             ul.production-list 
@@ -139,7 +225,7 @@ header.header
                                     .production-list__item-img
                                         img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                     li
-                        a(href="#") ПОРТФОЛИО
+                        a(href="/portfolio-page.html") ПОРТФОЛИО
                     li
                         a(href="#") ТЕХНОЛОГИИ
                     li
@@ -194,5 +280,8 @@ header.header
                         .header-contacts__list-city РЕСП. БЕЛАРУСЬ
                         .header-contacts__list-phone
                             a(href="tel:+375 (017) 281-72-91") +375 (017) 281-72-91
-            a(href="#").header-cta.header-item заказать звонок
-            .burger
+            a(href="#").header-cta.header-item.call заказать звонок
+            button.burger
+                .burger-line.burger-line_top 
+                .burger-line.burger-line_mid
+                .burger-line.burger-line_bot

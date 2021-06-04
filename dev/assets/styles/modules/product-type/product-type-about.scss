@@ -34,11 +34,19 @@
         &__block {
             &s {}
             display: flex;
+            @media (max-width: 1000px) {
+                flex-direction: column;
+            }
             &-title {
-                max-width: 356px;
-                width: 100%;
+                width: 356px;
+                min-width: 356px;
                 margin-right: 66px;
                 @include H3;
+                @media (max-width: 1000px) {
+                    width: auto;
+                    min-width: auto;
+                    margin-bottom: 10px;
+                }
             }
             &-desc {
                 max-width: 780px;

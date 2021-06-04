@@ -3,7 +3,6 @@
     font-weight: normal;
     font-size: 128px;
     line-height: 156px;
-    opacity: 0;
     transition: 1s;
     position: relative;
     @media (max-width: 1600px) {
@@ -12,11 +11,19 @@
         font-size: 104px;
         line-height: 127px;
     }
+    @media (max-width: 768px) {
+        font-size: 80px;
+        line-height: 100%;
+    }
     &-section {}
     &-content {
         padding-top: 46px;
         padding-bottom: 154px;
         border-top: 1px solid var(--Black);
+        @media (max-width: 768px) {
+            padding-top: 34px;
+            padding-bottom: 72px;
+        }
     }
     &-list {
         display: flex;
@@ -27,8 +34,22 @@
             // padding-right: 100px;
             max-width: 1250px;
         }
+        @media (max-width: 1300px) {
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding-bottom: 40px;
+        }
         &__item {
             flex-basis: 25%;
+            @media (max-width: 1300px) {
+                flex-basis: 50%;
+            }
+            @media (max-width: 768px) {
+                flex-basis: auto;
+                margin-bottom: 30px;
+            }
             &-title {
                 @include H4;
                 text-transform: lowercase;
@@ -44,6 +65,13 @@
         line-height: 134.8%;
         @media (max-width: 1600px) {
             font-size: 32px;
+            line-height: 150%;
+        }
+        @media (max-width: 768px) {
+            padding-top: 29px;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
             line-height: 150%;
         }
         p {
@@ -62,6 +90,9 @@
         @media (max-width: 1600px) {
             width: 121px;
         }
+        @media (max-width: 768px) {
+            width: 75px;
+        }
         &:after {
             content: '+';
             position: absolute;
@@ -77,6 +108,9 @@
         text-align: right;
         @media (max-width: 1600px) {
             width: 160px;
+        }
+        @media (max-width: 768px) {
+            width: 105px;
         }
         &:after {
             content: '+';

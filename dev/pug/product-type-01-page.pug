@@ -14,6 +14,14 @@ block content
     +page-title('Ротонды, беседки, колоннады, перголы')
     section.section.hero-section
         .container
+            .hero-mobslider.swiper-container 
+                .swiper-wrapper
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
             .hero-content 
                 .hero-content_left 
                     .hero-content__img 
@@ -57,10 +65,10 @@ block content
                                 |  на местности бесплатно
                             | !
                         .hero-content__bot 
-                            .hero-content__bot-form 
+                            form.hero-content__bot-form 
                                 input(type="tel" placeholder="Ваш телефон")
                                 button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
-                            a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
+                            a(href="#prepared").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
                                 +icon('arr-down') 
     section.section.complet-section
         .container 
@@ -68,31 +76,44 @@ block content
                 .complet-content__info
                     .complet-content__links 
                         ul 
+                            li.complet-content__links-title
+                                | На этой странице
+                                +icon('shevron')
                             li
-                                a(href="#") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
+                                a(href="#done") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
                             li
-                                a(href="#") ПРЕИМУЩЕСТВА
+                                a(href="#advantages") ПРЕИМУЩЕСТВА
                             li
-                                a(href="#") ГОТОВЫЕ РЕШЕНИЯ
+                                a(href="#prepared") ГОТОВЫЕ РЕШЕНИЯ
                     .complet-content__title Предлагаем изготовление ротонд и беседок, колоннад и пергол из высокопрочного стеклофибробетона и вандалостойкого стеклокомпозита
                     .complet-content__desc 
                         p Широкий выбор фактур и цветов, в том числе подбор нужного Вам оттенка, различные варианты архитектурных решений – классические, стилизованые, с элементами балюстрады или ковки, имитацией меди/бронзы/позолоты для кровли и так далее. Исполним проект в любых габаритных размерах под ключ: от эскиза до монтажа готовой конструкции. Реализуем по Вашему проекту либо подберем готовое решение на Ваш вкус и бюджет.
                         p Большой производственный опыт привел нас к выбору технологии изготовления цельнолитых пустотелых несущих конструкций БЕЗ ШВОВ, в отличие от широко применяющихся сейчас технологий обшивки несущего металлического каркаса скорлупками из стеклофибробетона либо стеклопластика, на которых имеющиеся продольные и иногда поперечные швы со временем трескаются и приходят в негодность. 
                             br 
                             | В отличие от других наши ротонды и колоннады после установки не требуют периодической доводки – окраски и шпаклевания: один раз смонтировать и наслаждаться в течение долгих лет эксплуатации.
-    section.section.pageslider-section
+                    button.btn-empty.complet-content__desc-more Показать полностью
+    section.section.pageslider-section#done
         .container 
             +section-title({name:'Выполненные проекты', link: 'ВСЕ ПРОЕКТЫ', href: '#'})
             .section-content.pageslider-content
                 .pageslider.swiper-container 
                     .swiper-wrapper
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Фасадный декор здания усадьбы  Соколовых-Сибиряковых (XIX в.)
                                     .pageslider-item__geo Москва, Вознесенский пер., 11
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -100,22 +121,24 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc По предоставленному заказчиком проекту изготовлены элементы архитектурного декора из высокопрочного стеклофибробетона, разработан проект производства работ и произведен шеф-монтаж на объекте.
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
                                     .pageslider-item__geo с. Наровчат
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -123,22 +146,24 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
                                     .pageslider-item__geo с. Наровчат
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -146,13 +171,6 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
                 .slider-controls.pageslider-controls
@@ -162,52 +180,64 @@ block content
                         .slider-control__next.slider-control__item.swiper-button-next.pageslider-next
                             +icon('arr-right')
                     .slider-control__pagination.swiper-pagination.pageslider-pagination
-    section.section.features-section
+    section.section.features-section#advantages
         .container 
             +section-title({name:'Почему ротонды заказывают у нас', link: '', href: ''})
             .section-content.features-content
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/trophy.png", alt="img")
                         h3.features-content__block-title Качество применяемых материалов
                         p.features-content__block-desc Для производства изделий мы используем годами отработанные проверенные и сертифицированные составы высокопрочного фибробетона и вандалостойкого стеклокомпозита. Все наши материалы обладают высокими физико-техническими показателями – марка прочности на сжатие (М800 – М2000), морозостойкости (более 1000 циклов!), коррозионной стойкости, что превосходит существующие на рынке аналоги – стеклофибробетон, архитектурный бетон и даже натуральный камень! и позволяет гарантировать длительный срок службы изделий и конструкций.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/sertif.png", alt="img")
                         h3.features-content__block-title Сертификаты на всю продукцию
                         p.features-content__block-desc Предоставим по запросу: сертификаты соответствия требованиям нормативных документов с протоколами сертификационных испытаний физико-технических показателей (прочностные показатели, влагопоглощение, морозостойкость), сертификаты пожарной безопасности изделий с протоколами сертификационных испытаний (горючесть, воспламеняемость, дымообразующая способность, токсичность)
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/ecology.png", alt="img")
                         h3.features-content__block-title Экологичность и безопасность
                         p.features-content__block-desc В основе применяемых нами на производстве материалов лежит природное минеральное сырье: фибробетон и стеклокомпозит производятся из негорючих и нетоксичных материалов, что позволяет гарантировать экологическую и пожарную безопасность производимых изделий.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/f-cube.png", alt="img")
                         h3.features-content__block-title Любые размеры, цвета и фактуры
                         p.features-content__block-desc Рады предложить Вам изготовление ротонд, колоннад и других изделий абсолютно любых габаритных размеров, подберем нужный тон материала в соответствии с Вашими пожеланиями, при необходимости изготовим изделия с фактурой – гранита, песчаника, известняка и т.д., либо подберем полностью нужный Вам вариант по предоставленному образцу или картинке.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/logistics.png", alt="img")
                         h3.features-content__block-title Проработанная логистика
                         p.features-content__block-desc Наши ротонды уже смонтированы во многих городах России – Москва и Московская область, Пенза и Чебоксары, мы отработали не только технологии производства, но и удобную логистику без переплат для Клиента. Доставим и при необходимости смонтируем изделия в любой точке мира.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/hit.png", alt="img")
                         h3.features-content__block-title Работа по индивидуальному заказу
                         p.features-content__block-desc В основном мы специализируемся на индивидуальных заказах под ключ– когда Заказчик предоставляет эскиз/визуализацию либо где-то увиденное понравившееся готовое решение, либо может просто рассказать о своих пожеланиях – и мы вложим душу в реализацию Вашей идеи или проекта. При этом подходе тем не менее мы можем предложить большой выбор готовых решений на любой вкус и бюджет.
-    section.section.prepared-section
+    section.section.prepared-section#prepared
         .container 
             +section-title({name:'Готовые решения', link: '', href: ''})
             .section-content.prepared-content
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «ЭКОНОМ»
@@ -219,6 +249,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «КЛАССИКА-5»
@@ -230,6 +264,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «ЭКОНОМ»
@@ -241,6 +279,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title ПОЛУРОТОНДА «КЛАССИКА-5»
@@ -252,6 +294,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «ЭКОНОМ»
@@ -263,6 +309,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «КЛАССИКА-5»
@@ -274,6 +324,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title РОТОНДА «ЭКОНОМ»
@@ -285,6 +339,10 @@ block content
                         button.prepared-content__card-btn ЗАКАЗАТЬ
                 .prepared-content__item
                     .prepared-content__card
+                        .prepared-content__card-links
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
+                            a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg") 
                         .prepared-content__card-img 
                             img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
                         h4.prepared-content__card-title ПОЛУРОТОНДА «КЛАССИКА-5»

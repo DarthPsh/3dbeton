@@ -4,11 +4,21 @@
         padding-top: 47px;
         padding-bottom: 115px;
         max-width: 1624px;
+        @media (max-width: 1000px) {
+            padding-top: 23px;
+        }
         &__img {
             width: 100%;
             height: 384px;
             position: relative;
             margin-bottom: 69px;
+            @media (max-width: 1000px) {
+                margin-bottom: 12px;
+                height: 250px;
+            }
+            @media (max-width: 768px) {
+                height: 109px;
+            }
             img {
                 height: 100%;
                 width: 100%;
@@ -23,18 +33,38 @@
             display: flex;
             justify-content: space-between;
             padding-right: 78px;
+            @media (max-width: 1000px) {
+                flex-direction: column;
+            }
         }
         &__title {
             max-width: 485px;
             @include H3;
+            @media (max-width: 1600px) {
+                max-width: 400px;
+                padding-right: 40px;
+            }
+            @media (max-width: 1000px) {
+                max-width: none;
+                margin-bottom: 30px;
+            }
         }
         &__desc {
             max-width: 712px;
+            @media (max-width: 1000px) {
+                max-width: none;
+            }
             &-title {
                 @include H4;
                 margin-bottom: 27px;
+                @media (max-width: 768px) {
+                    display: none;
+                }
             }
             &-block {
+                @media (max-width: 768px) {
+                    display: none;
+                }
                 p {
                     margin-bottom: 32px;
                 }
@@ -42,9 +72,22 @@
         }
         &__btn {
             cursor: pointer;
+            @media (max-width: 768px) {
+                width: 304px;
+            }
+            &s {
+                @media (max-width: 768px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
             &-more {
                 padding: 20px 50px;
                 margin-right: 40px;
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
             }
             &-send {
                 color: var(--Gray);

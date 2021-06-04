@@ -2,11 +2,17 @@
     &-section {
         padding-top: 48px;
         padding-bottom: 122px;
+        @media (max-width: 1300px) {
+            padding-top: 69px
+        }
     }
     &-content {
         padding-right: 168px;
         @media (max-width: 1600px) {
             padding-right: 130px;
+        }
+        @media (max-width: 1300px) {
+            padding-right: 0;
         }
     }
     &-head {
@@ -15,16 +21,25 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        position: relative;
         @media (max-width: 1600px) {
             padding-bottom: 20px;
         }
+        @media (max-width: 768px) {
+            padding-bottom: 17px;
+        }
         &__link {
-            &s {}
+            &s {
+                white-space: nowrap;
+            }
             @include H2;
             color: var(--GrayLine);
             margin-right: 88px;
             @media (max-width: 1600px) {
                 margin-right: 48px;
+            }
+            @media (max-width: 768px) {
+                margin-right: 25px;
             }
             &_active {
                 position: relative;
@@ -46,6 +61,10 @@
             display: flex;
             align-items: flex-end;
             @include COND20;
+            @media (max-width: 1300px) {
+                position: absolute;
+                bottom: -43px;
+            }
             &-select {
                 cursor: pointer;
                 color: var(--Gray);
@@ -137,13 +156,32 @@
             grid-template-columns: repeat(3, 1fr);
             column-gap: 40px;
         }
+        @media (max-width: 1300px) {
+            // grid-template-columns: repeat(auto-fit,minmax(358px,358px));
+            column-gap: 8px;
+            row-gap: 24px;
+        }
+        @media (max-width: 1000px) {
+            column-gap: 8px;
+            row-gap: 24px;
+        }
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(auto-fit,minmax(148px,1fr));
+        }
         &__item {
             &-img {
-                width: 358px;
+                // width: 358px;
+                width: auto;
                 height: 290px;
                 position: relative;
                 overflow: hidden;
                 margin-bottom: 16px;
+                @media (max-width: 768px) {
+                    // width: 148px;
+                    width: auto;
+                    height: 120px;
+                    margin-bottom: 8px;
+                }
                 img {
                     position: absolute;
                     top: 50%;
@@ -157,6 +195,9 @@
             &-title {
                 color: var(--Black);
                 @include COND24;
+                @media (max-width: 768px) {
+                    @include COND16;
+                }
             }
             &:hover {
                 .product-grid__item-title {

@@ -9,6 +9,13 @@
         @media (max-width: 1600px) {
             background-position: calc(100% + 910px) 105px;
         }
+        @media (max-width: 1000px) {
+            background-position: 450px 105px;
+        }
+        @media (max-width: 768px) {
+            background-size: 824px 400px;
+            background-position: 20px calc(100% + -225px);
+        }
     }
     &-content {
         padding-top: 50px;
@@ -16,10 +23,17 @@
         @media (max-width: 1600px) {
             padding-bottom: 185px;
         }
+        @media (max-width: 1000px) {
+            padding-top: 24px;
+            padding-bottom: 75px;
+        }
         &__info {
             &-desc {
                 max-width: 553px;
                 padding-bottom: 39px;
+                @media (max-width: 1000px) {
+                    padding-bottom: 390px;
+                }
                 p {
                     margin-bottom: 35px;
                     &:last-child {
@@ -30,7 +44,11 @@
             &-logo {
                 &s {
                     display: flex;
+                    flex-wrap: wrap;
                     padding-bottom: 70px;
+                    @media (max-width: 768px) {
+                        padding-bottom: 38px;
+                    }
                 }
                 width: 133px;
                 height: 40px;

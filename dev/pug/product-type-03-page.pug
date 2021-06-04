@@ -14,6 +14,14 @@ block content
     +page-title('Архитектурный декор')
     section.section.hero-section
         .container
+            .hero-mobslider.swiper-container 
+                .swiper-wrapper
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
             .hero-content 
                 .hero-content_left 
                     .hero-content__img 
@@ -55,7 +63,7 @@ block content
                                 |  на местности бесплатно
                             | !
                         .hero-content__bot 
-                            .hero-content__bot-form 
+                            form.hero-content__bot-form 
                                 input(type="tel" placeholder="Ваш телефон")
                                 button.btn-fill.calc-cost РАССЧИТАТЬ СТОИМОСТЬ
                             a(href="#").hero-content__bot-anchor ГОТОВЫЕ РЕШЕНИЯ 
@@ -66,6 +74,9 @@ block content
                 .complet-content__info
                     .complet-content__links 
                         ul 
+                            li.complet-content__links-title
+                                | На этой странице
+                                +icon('shevron')
                             li
                                 a(href="#") ВЫПОЛНЕННЫЕ ПРОЕКТЫ
                             li
@@ -77,6 +88,7 @@ block content
                         p Производим архитектурные элементы с гарантией качества: обрамления проемов, карнизы, колонны, пилястры, балюстрады, панно, рустовые и замковые камни, кронштейны, барельефы, розетки, консоли, входные группы и многое другое.
                         p Стеклофибробетон (GFRC) нового поколения, фасадный стеклокомпозит, гипс и фиброгипс (GFRG) – современные материалы, которые отличаются высокой прочностью, легкостью и надежностью.
                         p Уникальные свойства наших материалов позволяют изготавливать фасадные элементы в любом цветовом решении и самой различной текстуры - песчаник, травертин, гранит, известняк, мрамор и другие виды натурального камня, а также дерево, фарфор, металл, глянцевые и глазурованные фактуры и многое другое. Подберем фактуру и нужный Вам оттенок, предложим различные варианты архитектурных решений - исполним проект в любых габаритных размерах под ключ: от стадии проектирования до монтажа и обслуживания готовых конструкций.
+                    button.btn-empty.complet-content__desc-more Показать полностью
     section.section.pageslider-section
         .container 
             +section-title({name:'Выполненные проекты', link: 'ВСЕ ПРОЕКТЫ', href: '#'})
@@ -84,12 +96,21 @@ block content
                 .pageslider.swiper-container 
                     .swiper-wrapper
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Фасадный декор здания усадьбы  Соколовых-Сибиряковых (XIX в.)
                                     .pageslider-item__geo Москва, Вознесенский пер., 11
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -97,22 +118,24 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_1" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc По предоставленному заказчиком проекту изготовлены элементы архитектурного декора из высокопрочного стеклофибробетона, разработан проект производства работ и произведен шеф-монтаж на объекте.
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
                                     .pageslider-item__geo с. Наровчат
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -120,22 +143,24 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_2" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
                         .pageslider-item.swiper-slide
+                            a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                +icon('photo_camera')
+                                span Еще 
+                                span.count 3 
+                                br
+                                span фото
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
+                                a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
                             .pageslider-item__side.pageslider-item__main 
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-44.jpg", alt="img")
                                 .pageslider-item__content
                                     h3.pageslider-item__title Архитектурно-скульптурный ансамбль «Памятник русскому писателю А. И. Куприну»
                                     .pageslider-item__geo с. Наровчат
+                                    button.btn-empty.pageslider-item__what Что было сделано
                                     .pageslider-item__tags 
                                         .pageslider-item__tag Архитектурный декор
                                         .pageslider-item__tag 3D-ГРАНИТ
@@ -143,13 +168,6 @@ block content
                             .pageslider-item__side.pageslider-item__second
                                 .pageslider-item__img 
                                     img(src="https://3dbeton.ru/wp-content/uploads/2018/09/3d-beton-23.jpg", alt="img")
-                                    a.pageslider-item__img-more(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
-                                        | Еще 
-                                        span.count 3 
-                                        br
-                                        | фото
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
-                                        a(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="pageslider-gallery_3" data-title="заголовок изображения")
                                 .pageslider-item__content
                                     .pageslider-item__desc Для реализации проекта были разработаны состав и технология изготовления высокопрочного бетона с фактурой гранита «Возрождение» с морозостойкостью более 1000 циклов! в соответствии с требованиями к гранитным основаниям памятников о сроке службы  без видимых разрушений не менее 50 лет. В результате разработки материала, который мы впоследствии назвали 3d-гранит, бюджет проекта, запланированный на приобретение, доставку и монтаж блоков из натурального гранита удалось сократить более чем в 3,5 раза!
                 .slider-controls.pageslider-controls
@@ -165,36 +183,42 @@ block content
             .section-content.features-content
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/pyramids.png", alt="img")
                         h3.features-content__block-title Долговечность
                         p.features-content__block-desc Мы применяем сертифицированные составы высокопрочного фибробетона нового поколения и легкого стеклокомпозита, обладающие высокими физико-техническими показателями – марка прочности на сжатие (М800 – М2000), морозостойкости (от 500 до 1000 циклов!), что превосходит существующие на рынке аналоги – обычный стеклофибробетон, архитектурный бетон и даже натуральный камень! и позволяет гарантировать длительный срок службы изделий и конструкций без необходимости в ремонте и реставрации.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/f-cube.png", alt="img")
                         h3.features-content__block-title Любые размеры, цвета и фактуры
                         p.features-content__block-desc Рады предложить Вам изготовление элементов архитектурного фасадного декора абсолютно любых габаритных размеров, подберем нужный оттенок материала в соответствии с Вашими пожеланиями, при необходимости изготовим изделия с фактурой – гранита, песчаника, известняка, травертина и других видов камня, а также дерева, фармора, металла, глянцевые и глазурованные поверхности. Подберем необходимые цвет и фактуру по предоставленной фотографии или образцу.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/ecology.png", alt="img")
                         h3.features-content__block-title Экологичность и безопасность
                         p.features-content__block-desc В основе применяемых нами на производстве материалов лежит природное минеральное сырье: фибробетон и стеклокомпозит производятся из негорючих и нетоксичных материалов, что позволяет гарантировать экологическую и пожарную безопасность производимых изделий.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/f-crown.png", alt="img")
                         h3.features-content__block-title Совершенство и точность форм
                         p.features-content__block-desc Достигаются нами за счет применения роботизированных технологий 3d-резьбы моделей вместо широко применяемого ручного формования. Мы создаем лепнину и сложные архитектурные элементы без отклонений от утвержденных Заказчиком моделей.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/logistics.png", alt="img")
                         h3.features-content__block-title Проработанная логистика
                         p.features-content__block-desc Наши ротонды уже смонтированы во многих городах России – Москва и Московская область, Пенза и Чебоксары, мы отработали не только технологии производства, но и удобную логистику без переплат для Клиента. Доставим и при необходимости смонтируем изделия в любой точке мира.
                 .features-content__block
                     .features-content__block-inner
+                        +icon('shevron')
                         .features-content__block-img 
                             img(src="/assets/images/common/hit.png", alt="img")
                         h3.features-content__block-title Работа по индивидуальному заказу

@@ -14,6 +14,14 @@ block content
     +page-title('Корпоративные, бизнес подарки, рекламные сувениры, аксессуары для рабочего стола')
     section.section.hero-section
         .container
+            .hero-mobslider.swiper-container 
+                .swiper-wrapper
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
+                    a.hero-mobslider__item.swiper-slide(href="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg" data-lightbox="hero-mob-gallery" data-title="заголовок изображения") 
+                        img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-11.jpg", alt="img")
             .hero-content 
                 .hero-content_left 
                     .hero-content__img 
@@ -54,7 +62,7 @@ block content
                                 | с ценами 
                             | на сувенирную продукцию из бетона
                         .hero-content__bot 
-                            .hero-content__bot-form 
+                            form.hero-content__bot-form 
                                 input(type="tel" placeholder="Ваш телефон")
                                 button.btn-fill.hero-content__bot-pdf ПОЛУЧИТЬ PDF
                             button.btn-o.hero-content__bot-order СДЕЛАТЬ ЗАКАЗ
@@ -140,6 +148,8 @@ block content
                             .row-slider__item-title   заголовок 
             .example-banner__wrap 
                 .example-banner
+                    .example-banner__img 
+                        img(src="/assets/images/common/kulon.png", alt="img")
                     h3.example-banner__title Мы можем изготовить 
                         br
                         span любую сувенирную продукцию,  

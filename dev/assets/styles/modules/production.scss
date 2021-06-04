@@ -3,6 +3,9 @@
         @media (max-width: 1600px) {
             padding-right: 130px;
         }
+        @media (max-width: 1000px) {
+            display: none;
+        }
     }
     &-content {
         padding: 93px 0 136px 0;

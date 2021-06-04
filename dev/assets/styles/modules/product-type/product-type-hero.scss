@@ -2,14 +2,28 @@
     &-section {
         padding-top: 48px;
         padding-bottom: 101px;
+        @media (max-width: 1000px)  {
+            padding-top: 32px;
+            padding-bottom: 90px;
+        }
     }
     &-content {
         display: flex;
+        @media (max-width: 1000px) {
+            flex-direction: column;
+        }
         &_left {
             max-width: 1192px;
             width: 100%;
             @media (max-width: 1600px) {
                 width: 756px;
+            }
+            @media (max-width: 1300px) {
+                width: 560px;
+            }
+            @media (max-width: 1000px) {
+                padding-bottom: 18px;
+                display: none;
             }
         }
         &__img {
@@ -52,6 +66,10 @@
                 @media (max-width: 1600px) {
                     width: 120px;
                     height: 80px;
+                }
+                @media (max-width: 1300px) {
+                    width: 60px;
+                    height: 40px;
                 }
                 &:before {
                     content: '';
@@ -109,28 +127,48 @@
         }
         &_right {
             padding-left: 36px;
-            min-width: 500px;
-            @media (max-width: 1600px) {
-                min-width: auto;
+            max-width: 500px;
+            @media (max-width: 1000px) {
+                max-width: none;
+                padding-left: 0;
             }
         }
         &__info {}
         &__list {
             ul {
                 position: relative;
-                &:before {
-                    content: '';
-                    height: 100%;
-                    width: 4px;
-                    background: var(--Grad2);
-                    left: 0;
-                    top: 0;
-                    display: block;
-                    position: absolute;
+                @media (max-width: 768px) {
+                    // display: flex;
+                    // flex-wrap: wrap;
                 }
+                // &:before {
+                //     content: '';
+                //     height: 100%;
+                //     width: 4px;
+                //     background: var(--Grad2);
+                //     left: 0;
+                //     top: 0;
+                //     display: block;
+                //     position: absolute;
+                // }
                 li {
                     position: relative;
                     padding-left: 30px;
+                    @media (max-width: 768px) {
+                        // flex-basis: 50%;
+                        padding-left: 15px;
+                        // padding-right: 10px;
+                    }
+                    &:before {
+                        content: '';
+                        height: 100%;
+                        width: 4px;
+                        background: var(--Grad2);
+                        left: 0;
+                        top: 0;
+                        display: block;
+                        position: absolute;
+                    }
                 }
             }
         }
@@ -138,6 +176,9 @@
             max-width: 546px;
             margin-bottom: 40px;
             margin-top: 29px;
+            @media (max-width: 1000px) {
+                max-width: none;
+            }
             &-block {
                 height: auto;
                 max-height: 228px;
@@ -185,11 +226,42 @@
         &__bot {
             display: flex;
             align-items: flex-end;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
+            @media (max-width: 1750px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            @media (max-width: 1600px) {
+                flex-direction: row;
+                align-items: flex-end;
+            }
+            @media (max-width: 1300px) {
+                flex-wrap: wrap;
+            }
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 304px;
+            }
             &-form {
                 display: flex;
                 flex-direction: column;
                 padding-right: 35px;
+                @media (max-width: 768px) {
+                    padding-right: 0;
+                    width: 100%;
+                }
+                button {
+                    @media (max-width: 1750px) {
+                        margin-bottom: 15px;
+                    }
+                    @media (max-width: 1600px) {
+                        margin-bottom: 0;
+                    }
+                    @media (max-width: 768px) {
+                        margin-bottom: 15px;
+                    }
+                }
                 input {
                     width: 100%;
                     border: none;
@@ -208,6 +280,11 @@
                 @include gradient-text;
                 display: flex;
                 align-items: baseline;
+                white-space: nowrap;
+                @media (max-width: 768px) {
+                    width: 100%;
+                    justify-content: center;
+                }
                 .svg-sprite-icon {
                     height: 15px;
                     width: 15px;
@@ -218,6 +295,9 @@
             &-order {
                 padding: 16px 25px;
                 // width: 199px;
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
             }
             &-inner {
                 display: flex;
@@ -234,6 +314,31 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+            }
+        }
+    }
+    &-mobslider {
+        display: none;
+        @media (max-width: 1000px) {
+            display: block;
+            overflow: visible;
+            height: 368px;
+            padding-right: 100px;
+            padding-bottom: 18px;
+        }
+        @media (max-width: 768px) {
+            height: 294px;
+            padding-right: 30px;
+        }
+        &__item {
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
             }
         }
     }

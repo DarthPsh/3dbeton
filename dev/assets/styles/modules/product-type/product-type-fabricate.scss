@@ -14,6 +14,14 @@
             padding-right: 130px;
             padding-bottom: 222px;
         }
+        @media (max-width: 1000px) {
+            padding-right: 0;   
+            column-gap: 8px;        
+        }
+        @media (max-width: 768px) {  
+            grid-template-columns: repeat(auto-fit,minmax(304px,1fr));
+            row-gap: 48px;
+        }
         &__block {
             &-inner {}
             &-img {
@@ -24,6 +32,10 @@
                 position: relative;
                 @media (max-width: 1600px) {
                     height: 320px;
+                }
+                @media (max-width: 768px) {  
+                    height: 192px;
+                    margin-bottom: 16px;
                 }
                 img {
                     position: absolute;
@@ -38,6 +50,9 @@
             &-title {
                 margin-bottom: 15px;
                 @include H3;
+                @media (max-width: 768px) {
+                    margin-bottom: 8px;
+                }
             }
         }
         &__btn {

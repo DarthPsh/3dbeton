@@ -3,12 +3,19 @@
     &-content {
         padding-top: 80px;
         padding-bottom: 120px;
+        @media (max-width: 768px) {
+            padding-top: 37px;
+            padding-bottom: 32px;
+        }
     }
     &-list {
         .row {
             &-slider {
                 &__item {
                     height: 480px;
+                    @media (max-width: 768px) {
+                        height: 374px;
+                    }
                     &-img {
                         margin-bottom: 0;
                         height: 100%;

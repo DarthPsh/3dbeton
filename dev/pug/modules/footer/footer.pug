@@ -34,10 +34,15 @@ footer.footer
                         input(type="tel" placeholder="Телефон")
                         input(type="email" placeholder="Почта")
                         textarea(placeholder="Задача проекта")
-                        label.download-file
-                            span ПРИКРЕПИТЬ ФАЙЛ
-                            +icon('circle-plus')
-                            input(type="file")
+                        .download-file__wrap
+                            label.download-file
+                                span ПРИКРЕПИТЬ ФАЙЛ
+                                +icon('circle-plus')
+                                input(type="file" multiple)
+                                .download-file__names
+                                    small Не более 10 файлов, размером меньше 25 Мб
+                            .download-file__del
+                                +icon('close')
                         .footer-article__form-bot 
                             .footer-policy Нажимая на кнопку «Отправить», я соглашаюсь с 
                                 a(href="#") Политикой конфиденциальности
@@ -56,3 +61,95 @@ footer.footer
                         a(href="#") ТЕЛЕГРАМ
             .footer-bot__item.footer-bot__dev Сайт сделан в 
                 a(href="https://7pap.ru/") СЕМЬ ПАП: 
+
+
+
+.popup-wrap.popup-cta.popup-cta_call
+    .popup-overlay
+        .popup
+            .popup-cta__title Заказать звонок
+            .popup-cta__content
+                .popup-cta__subtitle Перезвоним 
+                    br 
+                    | и ответим 
+                    br 
+                    | на все ваши 
+                    br 
+                    | вопросы
+                form.popup-cta__form
+                    input.popup-cta__form-input.popup-cta__form-name(type="text" placeholder="Ваше имя")
+                    input.popup-cta__form-input.popup-cta__form-tel(type="tel" placeholder="Телефон")
+                    .popup-cta__form-more 
+                        .form-more__info 
+                            .form-more__info-desc Поможем вам еще быстрее, если вы добавите информацию о вашем проекте:
+                            .btn-empty.form-more__info-btn 
+                                span Добавить информацию о вашем проекте
+                        .form-more__content
+                            textarea.popup-cta__form-text(placeholder="Сообщение")
+                    .popup-cta__policy Нажимая на кнопку «Отправить», я соглашаюсь с 
+                        a(href="#") Политикой конфиденциальности
+                    button#popup-cta-send_call.popup-cta__btn.btn-fill(type="submit") ОТПРАВИТЬ
+            .popup-close
+
+
+.popup-wrap.popup-cta.popup-cta_order
+    .popup-overlay
+        .popup
+            .popup-cta__title Заказ
+            .popup-cta__content
+                .popup-cta__subtitle Оформите заявку — и мы свяжемся с вами для уточнения заказа
+                form.popup-cta__form
+                    input.popup-cta__form-input.popup-cta__form-name(type="text" placeholder="Ваше имя")
+                    input.popup-cta__form-input.popup-cta__form-tel(type="tel" placeholder="Телефон")
+                    input.popup-cta__form-input.popup-cta__form-email(type="email" placeholder="Электронная почта")
+                    textarea.popup-cta__form-text(placeholder="Описание заказа")
+                    .popup-cta-download-file__wrap
+                        label.popup-cta-download-file
+                            span ПРИКРЕПИТЬ ФАЙЛ
+                            +icon('circle-plus')
+                            input(type="file" multiple)
+                            .popup-cta-download-file__names
+                                small Не более 10 файлов, размером меньше 25 Мб
+                        .popup-cta-download-file__del
+                            +icon('close')
+                    .popup-cta__policy Нажимая на кнопку «Отправить», я соглашаюсь с 
+                        a(href="#") Политикой конфиденциальности
+                    button#popup-cta-send_order.popup-cta__btn.btn-fill(type="submit") ОТПРАВИТЬ
+            .popup-close
+
+
+.popup-wrap.popup-cta.popup-cta_prepared
+    .popup-overlay
+        .popup
+            .popup-slider__wrap 
+                .popup-slider.swiper-slider 
+                    .popup-slider__controls
+                        .popup-slider__controls-btn.popup-slider__controls-next
+                            +icon('arrow')
+                        .popup-slider__controls-btn.popup-slider__controls-prev
+                            +icon('arrow')
+                    .swiper-wrapper
+            .popup-cta__title Заголовок меняется
+            .popup-cta__content
+                .popup-cta_prepared-info  
+                    .popup-cta_prepared-price 
+                        .popup-cta_prepared-price-title Стоимость базовой комплектации:
+                        .popup-cta_prepared-price-num
+                    .popup-cta_prepared-desc Описание меняется
+                form.popup-cta__form 
+                    input.popup-cta__form-input.popup-cta__form-name(type="text" placeholder="Ваше имя")
+                    input.popup-cta__form-input.popup-cta__form-tel(type="tel" placeholder="Телефон")
+                    input.popup-cta__form-input.popup-cta__form-email(type="email" placeholder="Электронная почта")
+                    .popup-cta__policy Нажимая на кнопку «Отправить», я соглашаюсь с 
+                        a(href="#") Политикой конфиденциальности
+                    button#popup-cta-send_prepared.popup-cta__btn.btn-fill(type="submit") ОТПРАВИТЬ
+            .popup-close
+
+
+.popup-wrap.popup-ok
+    .popup-overlay
+        .popup
+            .popup-ok__title Отправлено
+            .popup-ok__desc Мы оперативно обработаем вашу заявку и свяжемся с вами в рабочее время (Пн-пт, 09:00–18:00)
+            button.btn-fill.popup-ok__btn понятно
+            .popup-close

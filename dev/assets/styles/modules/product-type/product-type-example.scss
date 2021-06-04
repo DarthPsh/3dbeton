@@ -3,6 +3,10 @@
     &-content {
         padding-top: 57px;    
         padding-bottom: 130px;
+        @media (max-width: 768px) {
+            padding-top: 24px;
+            padding-bottom: 80px;
+        }
     }
     &-block {
         cursor: pointer;
@@ -56,38 +60,50 @@
         }
     }
     &-banner {
+        position: relative;
         &__wrap {
             padding-right: 130px;
             padding-bottom: 114px;
+            @media (max-width: 1300px) {
+                padding-right: 0;
+            }
         }
-        padding: 54px 48px 64px;
-        background-image: url('/assets/images/common/kulon.png');
-        background-repeat: no-repeat;
-        background-position: right top;
-        background-size: contain;
-        position: relative;
-        @media (max-width: 1600px) {
-            background-position: 350px top;
-        }
-        @media (max-width: 1300px) {
-            background-size: cover;
-        }
-        &:before {
-            content: '';
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            left: 0;
-            top: 0;
+        &__img {
             background: linear-gradient(180deg, #F1F1F1 0%, #F1F1F1 46.83%, #EAEAEA 100%);
-            z-index: -1;
+            display: flex;
+            justify-content: flex-end;
+            height: 518px;
+            @media (max-width: 1300px) {
+                height: 350px;
+            }
+            @media (max-width: 1000px) {
+                margin-bottom: 24px;
+            }
+            @media (max-width: 1000px) {
+                margin-bottom: 24px;
+            }
+            @media (max-width: 768px) {
+                height: 164px;
+            }
+            img {
+                object-fit: cover;
+            }
         }
         &__title {
             @include H3-dim;
-            margin-bottom: 188px;
+            position: absolute;
+            top: 54px;
+            left: 48px;
             @media (max-width: 1600px) {
                 max-width: 480px;
+            }
+            @media (max-width: 1300px) {
+                bottom: 40px;
+                left: 20px;
+            }
+            @media (max-width: 1000px) {
+                position: static;
+                margin-bottom: 42px;
             }
             span {
                 background: var(--Grad3);
@@ -105,8 +121,18 @@
         &__btn {
             &s {
                 display: flex;
+                position: absolute;
+                bottom: 64px;
+                left: 48px;
                 @media (max-width: 1600px) {
                     flex-direction: column;
+                }
+                @media (max-width: 1300px) {
+                    bottom: 40px;
+                    left: 20px;
+                }
+                @media (max-width: 1000px) {
+                    position: static;
                 }
             }
             width: 280px;
