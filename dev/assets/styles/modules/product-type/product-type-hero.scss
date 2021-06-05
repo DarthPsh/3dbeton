@@ -95,6 +95,7 @@
                     position: absolute;
                     z-index: 100;
                     opacity: 0;
+                    transform: scale(0);
                     transition: .2s;
                 }
                 img {
@@ -111,6 +112,7 @@
                     }
                     &:after {
                         opacity: 1;
+                        transform: scale(1);
                     }
                 }
             }

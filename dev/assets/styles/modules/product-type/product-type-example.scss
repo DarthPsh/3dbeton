@@ -36,7 +36,7 @@
                 display: block;
                 position: absolute;
                 z-index: 100;
-                transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%) scale(0);
                 transition: .2s;
                 @include COND20;
                 color: var(--White);
@@ -55,6 +55,7 @@
                     -webkit-background-clip: unset; 
                     -webkit-text-fill-color: var(--White);
                     opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
                 }
             }
         }

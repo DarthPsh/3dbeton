@@ -118,7 +118,6 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 
     if (!$('.popup').is(e.target) // если клик был не по нашему блоку
         && $('.popup').has(e.target).length === 0) { // и не по его дочерним элементам
-        console.log('123');
         $('.popup-close').click();
     }
 });
@@ -127,6 +126,12 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 $('.row-slider__wrap').each(function () {
     let rowSliderCount = $(this).find('.row-slider__item').length;
     $(this).find('.row-slider__count').text(rowSliderCount);
+});
+
+$('.row-slider').each(function () {
+    if ($(this).find('.row-slider__item').length <= 4) {
+        $(this).find('.row-slider__controls').css('display', 'none');
+    }
 });
 
 function initRowSlider() {

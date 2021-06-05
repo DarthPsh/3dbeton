@@ -191,6 +191,12 @@
             margin-right: 12px;
             margin-top: 11px;
             display: inline-block;
+            color: var(--Gray);
+            &:hover {
+                background: var(--Grad3);
+                @include gradient-text;
+                border-color: #dd428e; 
+            }
             &:last-child {
                 margin-right: 0;
             }

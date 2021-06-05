@@ -30,8 +30,8 @@ block content
                     .complet-content__desc 
                         p Мы рады работать с вашим проектом в любой стадии проработки архитектурных и технических решений. Это могут быть как эскиз в карандаше или фото понравившегося объекта, так и сложные конструкторские расчеты самонесущих декоративных элементов или металлической подсистемы под габаритные изделия и конструкции.
                         .complet-content__desc-btns 
-                            button.btn-fill.complet-content__desc-btn.complet-content__desc-order ЗАКАЗАТЬ ПРОЕКТ ПОД КЛЮЧ
-                            button.btn-o.complet-content__desc-btn.complet-content__desc-consult ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
+                            button.btn-fill.complet-content__desc-btn.complet-content__desc-order.order ЗАКАЗАТЬ ПРОЕКТ ПОД КЛЮЧ
+                            button.btn-o.complet-content__desc-btn.complet-content__desc-consult.call ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ
     section.section.design-section
         .container 
             +section-title({name:'Проектирование', link: '', href: ''})
@@ -52,7 +52,7 @@ block content
                                 li КМД ( деталировочные чертежи элементов с закладными),
                                 li КМ (рабочая документация с конструкторским расчетом),
                                 li ППР (монтажные схемы, инструкции по монтажу)
-                            button.btn-o заказать
+                            button.btn-o.order заказать
     section.section.ourprod-section
         .container 
             +section-title({name:'Производство', link: '', href: ''})
@@ -120,8 +120,8 @@ block content
                                 a(href="#") 
                                     span дерева и фанеры 
                         .ourprod-banner__btns 
-                            button.ourprod-banner__btn.btn-fill СДЕЛАТЬ ЗАКАЗ
-                            button.ourprod-banner__btn.btn-o СДЕЛАТЬ ЗАКАЗ
+                            button.ourprod-banner__btn.btn-fill.order СДЕЛАТЬ ЗАКАЗ
+                            button.ourprod-banner__btn.btn-o.order СДЕЛАТЬ ЗАКАЗ
                     .ourprod-banner__img
                         img(src="https://3dbeton.ru/wp-content/themes/3dbeton/img/slider/slide-1.jpg", alt="img")
     section.section.delivery-section
@@ -170,4 +170,4 @@ block content
                             h3.montage-grid__item-title Монтаж архитектурного декора под ключ
                             .montage-grid__item-desc 
                                 p Состав работ: подсистема, элементы из стеклофибробетона и стеклокомпозита, финишная отделка с герметизацией швов
-                button.btn-o.montage-more заказать
+                button.btn-o.montage-more.order заказать
